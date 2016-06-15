@@ -1,0 +1,54 @@
+#include <iostream> 
+#include <stdio.h>
+#include "CommonDefines.h"
+#include "IModule.h"
+#include <pthread.h>
+
+using namespace std;
+
+class myModule : public IModule {
+
+public:
+		
+	myModule(){
+		cout << "myModule Constructor" << endl;
+		//REGISTER PORTS
+		rx_ports[1] = new MessageQueue("Iport1");
+		rx_ports[2] = new MessageQueue("Iport2");
+		tx_ports[1] = new MessageQueue("Oport1");
+		
+	}
+	void start(){
+		cout << "myModule Start" << endl;
+		pthread_t t1;
+		pthread_create(&t1,NULL,thread,NULL);
+		while(1)
+		{
+			MessageQueue::Message* im1 = rx_ports[1]->Read();
+			MessageQueue::Message* im2 = rx_ports[2]->Read();
+			string s1((char*) im1->mpData);
+			string s2((char*) im2->mpData);
+			
+			string s(s1 + s2);
+
+			MessageQueue::Message* om1 = new MessageQueue::Message();
+	
+			om1->mDataLength = s.size();
+			om1->mpData = (void* )s.c_str();
+
+			tx_ports[1]->Write(om1);
+
+		}
+		cout << "myModule Start End" << endl;
+	}
+	void stop(){
+		cout << "myModule Stop" << endl;
+	}
+};
+
+void* thread(void * p)
+{
+	cout << "THREAD" << endl;
+}
+
+REGISTER_MODULE(myModule);

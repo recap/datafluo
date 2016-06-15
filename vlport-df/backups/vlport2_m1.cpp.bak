@@ -1,0 +1,218 @@
+#include <iostream>
+#include <map>
+#include <utility>
+#include <vector>
+#include <string>
+#include <list>
+#include <malloc.h>
+
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <dlfcn.h>
+#include <pthread.h>
+
+#include "IModule.h"
+#include "IComm.h"
+#include "MessageQueue.h"
+#include "TokenString.h"
+
+#define CONFIG_FILE "config.conf"
+#define MODULE "./modules/myModule/myModule.so"
+
+#define IFILESO "comm/files/InputFile.so"
+#define OFILESO "comm/files/OutputFile.so"
+#define IPIPESO "comm/files/InputPipe.so"
+#define OPIPESO "comm/files/OutputPipe.so"
+//#define IPORT1 "Port:InputFile:in:1:testfile1.txt"
+//#define IPORT2 "Port:InputFile:in:2:testfile2.txt"
+//#define IPORT1 "Port:InputFile:in:1:odd.txt"
+//#define IPORT2 "Port:InputFile:in:2:even.txt"
+//#define OPORT1 "Port:OutputFile:out:1:dump.txt"
+
+//PIPES
+
+//#define IPORT2 "Port:InputFile:in:2:tpipe"
+//#define OPORT1 "Port:OutputFile:out:1:tpipe"
+
+//myModule
+#define IPORT1 "Port:InputFile:in:1:testfile1.txt"
+#define IPORT2 "Port:InputFile:in:2:testfile2.txt"
+#define OPORT1 "Port:OutputFile:out:1:tpipe"
+
+using namespace std;
+
+int parse_args(int argc,char* argv[]);
+
+char* comp_so = NULL;
+map<string, maker_t *, less<string> > gModuleFactory;
+map<string, cmaker_t *, less<string> > gCommFactory;
+map<string, maker_t *, less<string> >::iterator fitr;
+//map<string, void *, less<string> > gCommLib;
+list<void *> gCommLib;
+vector<IComm *> icomm;
+vector<IComm *> ocomm;
+//list<char *>
+//map<string, maker_t *, less<string> >::iterator gCommLibItr;
+//map<string, void *, less<string> > gModuleLib;
+IModule* module;
+int load_lib(char* );
+void *icomm_start(void *icomm);
+void *module_start(void *imodule);
+void *scheduler(void *p);
+
+pthread_t thr[10];
+
+void port_start_up()
+{
+	load_lib(IFILESO);
+	load_lib(OFILESO);
+	load_lib(IPIPESO);
+	load_lib(OPIPESO);
+	pthread_t t1,t2,t3;
+
+	/*IComm *iport1 = gCommFactory["InputFile"]();
+	icomm.push_back(iport1);
+	IComm *iport2 = gCommFactory["InputPipe"]();
+	icomm.push_back(iport2);
+	IComm *oport1 = gCommFactory["OutputPipe"]();
+	ocomm.push_back(oport1);*/
+	
+	IComm *iport1 = gCommFactory["InputFile"]();
+	icomm.push_back(iport1);
+	IComm *iport2 = gCommFactory["InputFile"]();
+	icomm.push_back(iport2);
+	IComm *oport1 = gCommFactory["OutputPipe"]();
+	ocomm.push_back(oport1);
+
+	TokenString::TokenString *ts1 = new TokenString::TokenString(IPORT1,":");
+	TokenString::TokenString *ts2 = new TokenString::TokenString(IPORT2,":");
+	TokenString::TokenString *ts3 = new TokenString::TokenString(OPORT1,":");
+	
+	iport1->init(ts1->tokens);
+	pthread_create(&thr[0],NULL,icomm_start,iport1);
+
+	iport2->init(ts2->tokens);
+	pthread_create(&thr[3],NULL,icomm_start,iport2);
+
+	oport1->init(ts3->tokens);
+	pthread_create(&thr[4],NULL,icomm_start,oport1);
+
+}
+void *icomm_start(void *icomm)
+{
+	IComm *c = (IComm*)icomm;
+	c->start();
+}
+
+void *module_start(void *imodule)
+{
+	IModule *m = (IModule*)imodule;
+	m->start();
+}
+
+void module_start_up()
+{
+	void* dlib;
+	pthread_t t1;
+	dlib = dlopen(MODULE,RTLD_NOW);
+	if(dlib == NULL){
+		char *errstr;
+		errstr = dlerror();
+		if (errstr != NULL)
+		cerr << "A dynamic linking error occurred: " << errstr << endl;
+	}
+	module = gModuleFactory["myModule"]();
+
+	pthread_create(&thr[1],NULL,module_start,module);
+
+	
+	
+}
+/*void *scheduler(void *p)
+{
+	cout << "Scheduler Started" << endl;
+	MessageQueue::Message *m = icomm.at(0)->mQueue->Read();
+	cout << "Read Queue" << endl;
+	module->rx_ports[1]->Write(m);
+	cout << "Writen Queue" << endl;*/
+	//MessageQueue::Message *m2 = icomm.at(1)->mQueue->Read();
+	//cout << "Read Queue 2" << endl;
+	/*module->rx_ports[2]->Write(m2);
+	cout << "Writen Queue 2" << endl;
+
+	MessageQueue::Message *m3 = module->tx_ports[1]->Read();
+	ocomm.at(0)->mQueue->Write(m3);*/
+//}
+void *scheduler(void* p)
+{
+	cout << "scheeduler started!" << endl;
+	MessageQueue::Message *im1 = icomm.at(0)->mQueue->Read();
+	module->rx_ports[1]->Write(im1);
+	cout << "Read 1" << endl;
+	MessageQueue::Message *im2 = icomm.at(1)->mQueue->Read();
+	cout << "Read 2" << endl;
+	module->rx_ports[2]->Write(im2);
+
+	
+	MessageQueue::Message *om1 = module->tx_ports[1]->Read();
+	ocomm.at(0)->mQueue->Write(om1);
+	
+	cout << "Write 1" << endl;
+	
+}
+
+int main(int argc, char *argv[])
+{
+	cout << "Starting vlport2\n";
+	pthread_t t1;
+	module_start_up();
+	port_start_up();
+	pthread_create(&thr[2],NULL,scheduler,NULL);
+
+	pthread_join(thr[0],NULL);
+	pthread_join(thr[1],NULL);
+	pthread_join(thr[2],NULL);
+	pthread_join(thr[3],NULL);
+	pthread_join(thr[4],NULL);
+	//pthread_join(thr[5],NULL);
+	
+	return 0;
+}
+int load_lib(char* sofile)
+{
+	void *tlib;
+	tlib = dlopen(sofile,RTLD_NOW);
+	if(tlib == NULL)
+	{
+		cout << "erro opening So" << endl;
+		char *errstr;
+		errstr = dlerror();
+		if (errstr != NULL)
+		cerr << "A dynamic linking error occurred: " << errstr << endl;
+		return -1;
+	}
+	gCommLib.push_back(tlib);
+	return 0;
+		
+}
+void close_libs()
+{
+	list<void *>::iterator i;
+	 for(i=gCommLib.begin(); i != gCommLib.end(); ++i)
+		dlclose((*i));
+}
+
+int parse_args(int argc, char *argv[])
+{
+	int largc = 0;
+	char *p;
+	for(largc=1;largc < argc;largc++)
+	{
+		p = argv[largc];
+		if(!strcmp(p,"-c"))
+			comp_so = argv[largc+1];
+		
+	}//for
+	return 0;
+}

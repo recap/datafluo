@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:VLEAtomicModule xsi:type="ns1:VLEAtomicModule" xmlns:ns1="http://vle.wtcw.nl/htopology" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <instanceID xsi:type="xsd:string" xsi:nil="true" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+ <name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">SigWinScore</name>
+ <arguments xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"></arguments>
+
+ <VLEParameter type="string" xsi:type="ns1:VLEParameter">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">output_file_prefix</Name>
+  <Value xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">SigWin.out</Value>
+ </VLEParameter>
+ <VLEParameter type="string" xsi:type="ns1:VLEParameter">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">mode</Name>
+  <Value xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">score</Value>
+ </VLEParameter>
+ <VLEParameter type="string" xsi:type="ns1:VLEParameter">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">datatype</Name>
+  <Value xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">d</Value>
+ </VLEParameter>
+ <VLEParameter type="string" xsi:type="ns1:VLEParameter">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">threshold</Name>
+  <Value xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">high</Value>
+ </VLEParameter>
+ <VLEParameter type="bool" xsi:type="ns1:VLEParameter">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">write2port</Name>
+  <Value xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">true</Value>
+ </VLEParameter>
+
+ <VLEParameter type="string" xsi:type="ns1:VLEParameter">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">log_level</Name>
+  <Value xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">Info</Value>
+ </VLEParameter>
+ <VLEParameter type="string" xsi:type="ns1:VLEParameter">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">test_ports</Name>
+  <Value xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">all</Value>
+ </VLEParameter>
+
+ <VLEInputPort type="/SWParameters" xsi:type="ns1:VLEInputPort">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">sw_parameters</Name>
+ </VLEInputPort>
+ <VLEInputPort type="/array" xsi:type="ns1:VLEInputPort">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">sw_data</Name>
+ </VLEInputPort>
+ <VLEInputPort type="/number" xsi:type="ns1:VLEInputPort">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">fdr_threshold</Name>
+ </VLEInputPort>
+
+ <VLEOutputPort type="/string" xsi:type="ns1:VLEOutputPort">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">data_file_name</Name>
+ </VLEOutputPort>
+ <VLEOutputPort type="/file" xsi:type="ns1:VLEOutputPort">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">data_file</Name>
+ </VLEOutputPort>
+
+ <host xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">fs2.das3.science.uva.nl</host>
+</ns1:VLEAtomicModule>

@@ -1,0 +1,5 @@
+Module:myModule:0.1:./myModule.so
+Port:P001:InputFile:./InputFile.so:in:1:3:param?testfile1.txt
+Port:P002:InputFile:./InputFile.so:in:2:3:param?testfile2.txt
+Port:P003:OutputFile:./OutputFile.so:out:1:4:param?dump.txt
+Port:P004:OutputPipe:./OutputPipe.so:out:1:3:param?tpipe

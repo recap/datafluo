@@ -1,0 +1,100 @@
+#include <iostream>
+#include <stdio.h>
+#include <string.h>
+#include <malloc.h>
+#include <unistd.h>
+#include <cstdlib>
+#include <fstream>
+#include "CommonDefines.h"
+#include "IComm.h"
+#include "LogManager.H"
+#include "TokenString.h"
+
+#define GC GlobalConfiguration
+
+using namespace std;
+
+class OutputPGsiFtp : public IComm {
+private:
+	string mFileStr;
+	string mHostname;
+	string mRemoteFile;
+	string mDir;
+	string mCurrentDir;
+	string mHeadNode;
+	FILE*  mFile;
+	char** mParam;
+	void ParseParams(vector<string> rParam){
+		mHostname = rParam.at(1);
+		mDir = rParam.at(2);
+		
+		//mFileStr = rParam.at(1);
+		//mRemoteFile = rParam.at(2);
+	}
+	
+
+
+public:
+	OutputPGsiFtp(){
+		LOG_PTAG(Debug) << "comm/OutputPGsiFtp Constructor" << endl;
+		char buffer[100];
+		getcwd((char*)&buffer,100);
+		mCurrentDir.append((char*)&buffer);	
+	    putenv("X509_USER_PROXY=/home/rcushing/.globus/x509up_u1621");	
+		char* headnode;
+		headnode =  getenv("VL_HEAD_HOST");
+		LOG_PTAG(Info) << "VL_HEAD_HOST: " << (char*)headnode << endl;;
+		//headnode = *getenv("VL_HEAD_HOST");
+		//mHeadNode.append((char*)headnode);
+		//LOG_PTAG(Info) << "mHeadNode: " << mHeadNode;
+	}//()
+	void init(vector<string> rParam){
+		ParseParams(rParam);
+		mQueue = new MessageQueue("OutputPGsiFtp");
+		//LOG_PTAG(Debug) << "File set to: " << mFileStr << endl;
+	}//init
+	void start(){	
+			MessageQueue::Message *m = mQueue->Read();
+			char* s = (char*)m->mpData;
+			s[m->mDataLength] = '\0';
+			//string filestr = m->mMessageId;
+			string filestr(s);
+			TokenString::TokenString* ts = new TokenString::TokenString(filestr,"/");
+			string file_name = ts->tokens.back();	
+			if (file_exists(filestr.c_str()) == true ){
+				if(mHostname.compare(mHeadNode) != 0){
+					string gsiurl("gsiftp://"+mHostname+mDir+"/"+file_name);
+					string gucCmd("globus-url-copy file://"+filestr +" "+gsiurl);
+					
+					LOG_PTAG(Info) << "Command: " << gucCmd << flush;
+					system(gucCmd.c_str());
+				}else{
+					string mvCmd("mv "+filestr+" "+mDir+"/"+file_name);
+					//mvCmd.append("mv ");
+					//mvCmd.append(filestr);
+					//mvCmd.append(" ");
+					//mvCmd.append(mDir+"/"+file_name);
+					system(mvCmd.c_str());
+				}
+
+					string newMsgId("PGsiFtp://"+mHostname+mDir+"/"+file_name);
+					m->mMessageId = newMsgId;
+						
+			}//if file_exists
+			else
+				LOG_PTAG(Error) <<"File not found: " << filestr;
+
+	}//start
+
+	bool file_exists(const char* filename){
+        if(FILE* file = fopen(filename,"r")){
+            fclose(file);
+            return true;
+        }
+        return false;
+    }
+
+
+};
+
+REGISTER_LIB(OutputPGsiFtp);

@@ -1,0 +1,134 @@
+#include <iostream>
+#include <map>
+#include <utility>
+#include <vector>
+#include <string>
+#include <list>
+#include <malloc.h>
+
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <dlfcn.h>
+#include <pthread.h>
+
+#include "common/IComponent.h"
+#include "MessageQueue.h"
+
+using namespace std;
+
+int parse_args(int argc,char* argv[]);
+
+char *comp_so = NULL;
+map<string, maker_t *, less<string> > factory;
+
+struct Port
+{
+	char *mParam[30];
+	MessageQueue* mQueue;	
+};
+
+Port ports[30];
+int nextport = 0;
+
+int main(int argc, char *argv[])
+{
+	cout << "Starting vlport2\n";
+	
+	char line[100];
+
+	FILE* f;
+	f = fopen("config.conf","rt");
+	while(fgets(line,100,f) != NULL)
+	{
+	   	char *s = strtok(line,":");   
+		if(!strcmp(s,"Lib"))
+		{
+			s = strtok(NULL,":");
+			comp_so = (char*)malloc(sizeof(s));
+			strcpy(comp_so,s);
+			if(comp_so[strlen(comp_so) - 1] == '\n')
+				comp_so[strlen(comp_so) - 1] = '\0';
+			cout << comp_so << endl;
+		}
+	/*	if(!strcmp(s,"Port"))
+		{
+			int i = 0;
+			s = strtok(NULL,":");
+			while(s != NULL)
+			{
+				//char* t = strtok(s,"\n");
+				char *t = ports[nextport].mParam[i];
+				t = (char*)malloc(sizeof(s));
+				strcpy(t,s);
+				if(t[strlen(t) - 1] == '\n')
+					t[strlen(t) - 1] = '\0';
+				s = strtok(NULL,":");
+				i++;
+			}
+			nextport++;
+		}*/
+				
+	}	
+	fclose(f);
+	
+	//if(parse_args(argc,argv) == -1)
+	//	return -1;
+	
+	
+	void *dlib;
+	map<string, maker_t *, less<string> >::iterator fitr;
+	list<IComponent *> comp_list;
+	list<IComponent *>::iterator citr;
+
+	cout << comp_so << endl;			
+	dlib = dlopen(comp_so,RTLD_NOW);
+
+	if(dlib == NULL){
+		char *errstr;
+		errstr = dlerror();
+		if (errstr != NULL)
+		cerr << "A dynamic linking error occurred: " << errstr << endl;
+		return -1;
+	}
+	for(fitr=factory.begin(); fitr != factory.end(); fitr++)
+	{
+		cout << "Loaded Component: " << fitr->first << endl;	
+		comp_list.insert(comp_list.end(),factory[fitr->first]());
+	}
+	for(citr=comp_list.begin(); citr!=comp_list.end();citr++)
+	{
+		MessageQueue::Message *m = new MessageQueue::Message();
+		char* str = "Flipsy Turny";
+		m->mpData = str;
+		for(int i=0; i < MAX_IN_PORT; i++)
+		{
+			if( (*citr)->rx_ports[i] != NULL)
+				cout << "Input Port " << i << " active" << endl;
+		}
+		for(int i=0; i < MAX_OUT_PORT; i++)
+		{
+			if( (*citr)->tx_ports[i] != NULL)
+				cout << "Output Port " << i << " active" << endl;
+		}
+		//(*citr)->rx_ports[1]->Write(m);
+		(*citr)->start();
+	}	
+	dlclose(dlib);	
+
+	return 0;
+}
+
+int parse_args(int argc, char *argv[])
+{
+	int largc = 0;
+	char *p;
+	for(largc=1;largc < argc;largc++)
+	{
+		p = argv[largc];
+		if(!strcmp(p,"-c"))
+			comp_so = argv[largc+1];
+		
+	}//for
+	return 0;
+}

@@ -1,0 +1,14 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="Module" type="ModuleConfig"/>
+	<xsd:complexType name="ModuleConfig">
+		<xsd:sequence>
+			<xsd:element name="Name" type="xsd:string"/>
+			<xsd:element name="UID"  type="xsd:string"/>
+			<xsd:element name="Version" type="xsd:string"/>
+			<xsd:element name="InuptPorts" type="InPort"/>
+			<xsd:element name="OutputPorts" type="OutPort"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name=
+

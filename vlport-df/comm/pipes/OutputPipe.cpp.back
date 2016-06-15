@@ -1,0 +1,54 @@
+#include <iostream>
+#include <stdio.h>
+#include <string.h>
+#include <fstream>
+#include "CommonDefines.h"
+#include "IComm.h"
+#include <fcntl.h>
+
+using namespace std;
+
+class OutputPipe : public IComm {
+private:
+	string  mPipeStr;
+	FILE*  mPipe;
+	char** mParam;
+	void ParseParams(vector<string> rParam){
+		mPipeStr = rParam.at(4);
+	}
+	
+
+
+public:
+	OutputPipe(){
+		cout << "Started OutputPipe" << endl;
+	}
+	void init(vector<string> rParam){
+		ParseParams(rParam);
+		mQueue = new MessageQueue("PipeQ");
+		cout << "Pipe set to " << mPipeStr << endl;
+	}
+	void start(){
+			cout << "OutPipe: start!" << endl;	
+			FILE* fd;
+			cout << "OPENING PIPE" << endl;
+			fd = fopen(mPipeStr.c_str(),"wb");
+		while(1)
+		{
+			//Block waiting for messages on queue
+			MessageQueue::Message *im1 = mQueue->Read();
+			//Write message header. At the moment only message
+			//length is written as a header.
+			fwrite(&im1->mDataLength,sizeof(int),1,fd);			
+			//Write message data
+			fwrite((void*)im1->mpData,im1->mDataLength,1,fd);
+			//fwrite is bufferd i/o so needs flushing
+			fflush(fd);
+			cout << "WRITING PIPE" << endl;
+			
+		}//while
+	}//start
+
+};//class
+
+REGISTER_LIB(OutputPipe);

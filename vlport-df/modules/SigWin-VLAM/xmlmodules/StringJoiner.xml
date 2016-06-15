@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:VLEAtomicModule xsi:type="ns1:VLEAtomicModule" xmlns:ns1="http://vle.wtcw.nl/htopology" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <instanceID xsi:type="xsd:string" xsi:nil="true" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+ <name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">StringJoiner</name>
+ <category categoryname="Bioinformatics-SP1.5" taxonomyCode="150003" taxonomyURI="http://staff.science.uva.nl/~inda/SigWin-detector/html/modules.html" taxonomyValue="Connectors" xsi:type="ns1:CategoryType"/>
+ <arguments  xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"></arguments>
+
+ <VLEParameter type="int" xsi:type="ns1:VLEParameter">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">n_streams</Name>
+  <Value xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">4</Value>
+ </VLEParameter>
+
+ <VLEParameter type="string" xsi:type="ns1:VLEParameter">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">log_level</Name>
+  <Value xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">Info</Value>
+ </VLEParameter>
+ <VLEParameter type="string" xsi:type="ns1:VLEParameter">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">test_ports</Name>
+  <Value xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">all</Value>
+ </VLEParameter>
+
+ <VLEInputPort type="/string" xsi:type="ns1:VLEInputPort">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">in_stream1</Name>
+ </VLEInputPort>
+ <VLEInputPort type="/string" xsi:type="ns1:VLEInputPort">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">in_stream2</Name>
+ </VLEInputPort>
+ <VLEInputPort type="/string" xsi:type="ns1:VLEInputPort">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">in_stream3</Name>
+ </VLEInputPort>
+ <VLEInputPort type="/string" xsi:type="ns1:VLEInputPort">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">in_stream4</Name>
+ </VLEInputPort>
+
+ <VLEOutputPort type="/string" xsi:type="ns1:VLEOutputPort">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">out_stream</Name>
+ </VLEOutputPort>
+
+ <host xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">fs2.das3.science.uva.nl</host>
+</ns1:VLEAtomicModule>

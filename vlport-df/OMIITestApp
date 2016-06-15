@@ -1,0 +1,207 @@
+#!/usr/bin/perl -w
+ 
+#########################################################################
+##
+## � University of Southampton IT Innovation Centre, 2004
+##
+## Copyright in this library belongs to the IT Innovation Centre of
+## 2 Venture Road, Chilworth Science Park, Southampton SO16 7NP, UK.
+##
+## This software may not be used, sold, licensed, transferred, copied
+## or reproduced in whole or in part in any manner or form or in or
+## on any media by any person other than in accordance with the terms
+## of the Licence Agreement supplied with the software, or otherwise
+## without the prior written consent of the copyright owners.
+##
+## This software is distributed WITHOUT ANY WARRANTY, without even the
+## implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+## PURPOSE, except where stated in the Licence Agreement supplied with
+## the software.
+##
+## Created By : Ken Meacham
+## Created Date : 2004/06/30
+## Created for Project: GRIA
+##
+#########################################################################
+##
+## Dependencies : none
+##
+#########################################################################
+##
+## Last commit info: $Author: dbc $
+## $Date: 2005/06/06 12:20:19 $
+## $Revision: 1.1 $
+##
+#########################################################################
+ 
+# WARNING: THIS IS NOT AN APPLICATION WRAPPER OR PLATFORM WRAPPER.
+#          IT IS MERELY WRITTEN IN PERL FOR CONVENIENCE AND DOES NOT NEED TO BE EDITED.
+ 
+use Getopt::Long;
+use IO::Handle;
+ 
+# Set STDOUT and STDERR to flush after printing to them
+STDOUT->autoflush(1);  
+STDERR->autoflush(1);  
+ 
+my $help = 0;
+my $verbose = 0;
+my $cpu_time = 0;
+my $stdout_flag = 0;
+my @input_files = ();
+my @output_files = ();
+ 
+# Initialise start and end times
+my $start_time = time();
+my $end_time = $start_time;
+ 
+@ARGV_COPY = @ARGV;
+GetOptions("help" => \$help, "verbose" => \$verbose, "exit=i" => \$exit_code, "cputime=i" => \$cpu_time, "logs!" => \$stdout_flag) or usage("ERROR: Failed to parse commandline options: " . join(" ", @ARGV_COPY));
+ 
+if ($help) {
+      # Display usage and exit
+      usage();
+}
+ 
+print "GRIA Test Application\n\n";
+ 
+@input_files = @ARGV;
+ 
+if (defined $params_file) {print "Parameter file: $params_file\n";}
+if (defined $exit_code) {print "Will return exit code: $exit_code\n";}
+if (defined $cpu_time) {print "Requested CPU time: $cpu_time\n";}
+ 
+$end_time = $start_time + $cpu_time;
+ 
+print "Start time: " . localtime($start_time) . "\n";
+print "End time: " . localtime($end_time) . "\n\n";
+ 
+print "Input files: " . join(" ", @input_files) . "\n\n";
+ 
+# Loop through input files
+ 
+foreach $input_file (@input_files) {
+      # Get lest of words from input file
+      @wordArray = readFile($input_file);
+      if ($verbose) {print "\nWords list: " . join (" ", @wordArray) . "\n";}
+ 
+      # Sort words
+      @sortedArray = sortArray(@wordArray);
+      if ($verbose) {print "\nSorted words: " . join (" ", @sortedArray) . "\n";}
+ 
+      # Determine output file name (derive from input, then modify extension)
+      $output_file = determineOutputFile($input_file);
+ 
+      # Output sorted words to output file
+      writeFile($output_file, @sortedArray);
+ 
+      print "Sorted $input_file to $output_file\n";
+}
+ 
+# Exit using pre-defined exit code, otherwise return 0
+if (defined $exit_code) {
+        print "\nGRIA Test Application finished with predefined exit code: $exit_code\n";
+        exit($exit_code);
+}
+else {
+       print "\nGRIA Test Application finished successfully\n";
+       exit 0;
+}
+ 
+# Display usage information
+sub usage {
+       my $error_message = shift(@_);
+       if (defined $error_message) {
+            print $error_message . "\n";
+       }
+       print "usage: GRIATestApp.pl [-h|-help] [-v|-verbose] [-exit=<exit code>] [-cputime=<required cputime>] [-logs|-nologs] <input_file1> <input_file2> ...\n";
+       print "\n";
+       print "-h (or -help): displays this help message\n";
+       print "-v (or -verbose): sets verbose option (more diagnostic output)\n";
+       print "-exit=<exit code>: force the application to return with this exit code (unless another error occurs)\n";
+       print "-cputime=<required cputime>: force the application to take certain amount of time (in secs)\n";
+       print "-logs|-nologs: application will return stdout and stderr (or not). N.B. Only used by GRIA wrapper script\n";
+       print "<input_file>: name of input file to sort\n";
+       print "\n";
+ 
+       if (defined $error_message) {
+             exit 1;
+       }
+       else {
+             exit 0;
+       }
+}
+ 
+sub exitApplication {
+       my $exit_code = shift(@_);
+       exit $exit_code;
+}
+ 
+# Determine output filename from given input filename
+sub determineOutputFile {
+       my $input_file = shift(@_);
+       my $output_file = $input_file;
+ 
+       # Replace extension (e.g. ".txt") with ".std"
+       $output_file =~ s/\..+/.std/;
+ 
+       # If there is no extension, add one
+       if ($output_file eq $input_file) {
+            $output_file .= ".std";
+       }
+ 
+       return $output_file;
+}
+ 
+# Read from given file and return an array or words
+sub readFile {
+       my $file = shift(@_);
+       # Read file contents
+       if ($verbose) {print "\nReading file: $file\n";}
+       open(FILE, "< " . $file) or die("Could not open file: $file");
+       my @raw_data = <FILE>;
+       #print join(" ", @raw_data) . "\n";
+       close(FILE);
+ 
+       # Extract words array from raw data
+       my @words = split(/\s+/, join(" ", @raw_data));
+ 
+       return @words;
+}
+ 
+# Write the given array to a file
+sub writeFile {
+       my $file = shift(@_);
+       my @raw_data = @_;
+       # Write file contents
+       if ($verbose) {print "\nWriting file: $file\n";}
+       open(FILE, "> " . $file) or die("Could not write to file: $file");
+       print(FILE join(" ", @raw_data) . "\n");
+       close(FILE);
+}
+ 
+# Sort the given array
+sub sortArray {
+       my @array = @_;
+ 
+       # Sort the given array
+       if ($verbose) {print "\nSorting array...";}
+       my @sortedArray = sort(@array);
+ 
+       # Take some CPU time for given number of seconds
+       doSomeProcessing($cpu_time);
+       if ($verbose) {print "done\n";}
+ 
+       return @sortedArray;
+}
+ 
+# Occupy some CPU time
+sub doSomeProcessing {
+use Math::Complex;
+       # Loop until time limit is exceeded
+       while (time() < $end_time) {
+            for ($j = 0; $j < 10000; $j++) {
+                  sqrt(1234 * 1234);    
+            }
+      }
+}

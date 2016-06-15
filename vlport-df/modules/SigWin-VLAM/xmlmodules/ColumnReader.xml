@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:VLEAtomicModule xsi:type="ns1:VLEAtomicModule" xmlns:ns1="http://vle.wtcw.nl/htopology" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <instanceID xsi:type="xsd:string" xsi:nil="true" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+ <name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">ColumnReader</name>
+ <category categoryname="Bioinformatics-SP1.5" taxonomyCode="150002" taxonomyURI="http://staff.science.uva.nl/~inda/SigWin-detector/html/modules.html" taxonomyValue="Arrays" xsi:type="ns1:CategoryType"/>
+ <arguments xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"></arguments>
+
+ <VLEParameter type="string" xsi:type="ns1:VLEParameter">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">file_name</Name>
+  <Value xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">from_port</Value>
+ </VLEParameter>
+ <VLEParameter type="integer" xsi:type="ns1:VLEParameter">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">column</Name>
+  <Value xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">1</Value>
+ </VLEParameter>
+ <VLEParameter type="string" xsi:type="ns1:VLEParameter">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">datatype</Name>
+  <Value xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">d</Value>
+ </VLEParameter>
+ <VLEParameter type="string" xsi:type="ns1:VLEParameter">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">file_descr</Name>
+  <Value xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"></Value>
+ </VLEParameter>
+ <VLEParameter type="string" xsi:type="ns1:VLEParameter">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">col_descr</Name>
+  <Value xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"></Value>
+ </VLEParameter>
+ <VLEParameter type="string" xsi:type="ns1:VLEParameter">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">log_level</Name>
+  <Value xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">Info</Value>
+ </VLEParameter>
+ <VLEParameter type="string" xsi:type="ns1:VLEParameter">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">test_ports</Name>
+  <Value xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">all</Value>
+ </VLEParameter>
+ <VLEInputPort type="/file" xsi:type="ns1:VLEInputPort">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">input_file</Name>
+ </VLEInputPort>
+ <VLEOutputPort type="/array" xsi:type="ns1:VLEOutputPort">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">sequence</Name>
+ </VLEOutputPort>
+ <host xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">fs2.das3.science.uva.nl</host>
+</ns1:VLEAtomicModule>

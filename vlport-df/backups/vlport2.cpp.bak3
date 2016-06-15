@@ -1,0 +1,180 @@
+#include <iostream>
+#include <map>
+#include <utility>
+#include <vector>
+#include <string>
+#include <list>
+#include <malloc.h>
+
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <dlfcn.h>
+#include <pthread.h>
+
+#include "IModule.h"
+#include "MessageQueue.h"
+
+#define CONFIG_FILE "config.conf"
+#define MODULE "./modules/myModule/myModule.so"
+#define IPORT1 "Port:InputFile:in:1:testfile1.txt"
+#define IPORT2 "Port:InputFile:in:2:testfile2.txt"
+#define OPORT1 "Port:OutputFile:out:1:dump.txt"
+
+using namespace std;
+
+int parse_args(int argc,char* argv[]);
+
+char* comp_so = NULL;
+char* gParamData = NULL;
+map<string, maker_t *, less<string> > gModuleFactory;
+map<string, maker_t *, less<string> > gCommFactory;
+//map<string, void *, less<string> > gCommLib;
+list<void *> gCommLib;
+//list<char *>
+//map<string, maker_t *, less<string> >::iterator gCommLibItr;
+//map<string, void *, less<string> > gModuleLib;
+
+
+void load_libs();
+void close_libs();
+void load_config();
+
+void load_config()
+{
+	int len = 0;
+	FILE* f = fopen(CONFIG_FILE,"rt");
+    fseek(f,0,SEEK_END); 
+    len=ftell(f); 
+    fseek(f,0,SEEK_SET); 
+    gParamData=(char *)malloc(len);
+    fread(gParamData,len,1,f);
+    fclose(f);
+}
+
+int main(int argc, char *argv[])
+{
+	cout << "Starting vlport2\n";
+	//load_libs();
+
+	char line[100];
+
+	FILE* f;
+	f = fopen("config.conf","rt");
+	while(fgets(line,100,f) != NULL)
+	{
+	   	char *s = strtok(line,":");   
+		if(!strcmp(s,"Lib"))
+		{
+			//s = strtok(NULL,":");
+			//comp_so = (char*)malloc(sizeof(s));
+			//strcpy(comp_so,s);
+			comp_so = strtok(NULL,":");
+			if(comp_so[strlen(comp_so) - 1] == '\n')
+				comp_so[strlen(comp_so) - 1] = '\0';
+		}
+		/*if(!strcmp(s,"Port"))
+		{
+			int i = 0;
+			s = strtok(NULL,":");
+			while(s != NULL)
+			{
+				//char* t = strtok(s,"\n");
+				char *t = ports[nextport].mParam[i];
+				t = (char*)malloc(sizeof(s));
+				strcpy(t,s);
+				if(t[strlen(t) - 1] == '\n')
+					t[strlen(t) - 1] = '\0';
+				s = strtok(NULL,":");
+				i++;
+			}
+			nextport++;
+		}*/
+				
+	}	
+//	fclose(f);
+	
+	//if(parse_args(argc,argv) == -1)
+	//	return -1;
+	
+	
+	void *dlib;
+	map<string, maker_t *, less<string> >::iterator fitr;
+	list<IModule *> comp_list;
+	list<IModule *>::iterator citr;
+
+	cout << comp_so << endl;			
+	dlib = dlopen(comp_so,RTLD_NOW);
+
+	if(dlib == NULL){
+		char *errstr;
+		errstr = dlerror();
+		if (errstr != NULL)
+		cerr << "A dynamic linking error occurred: " << errstr << endl;
+		return -1;
+	}
+	gModuleFactory["myModule"]();
+	return 0 ;
+	for(fitr=gModuleFactory.begin(); fitr != gModuleFactory.end(); fitr++)
+	{
+		cout << "Loaded Module: " << fitr->first << endl;	
+		comp_list.insert(comp_list.end(),gModuleFactory[fitr->first]());
+	}
+	for(citr=comp_list.begin(); citr!=comp_list.end();citr++)
+	{
+		MessageQueue::Message *m = new MessageQueue::Message();
+		char* str = "Flipsy Turny";
+		m->mpData = str;
+		for(int i=0; i < MAX_IN_PORT; i++)
+		{
+			if( (*citr)->rx_ports[i] != NULL)
+				cout << "Input Port " << i << " active" << endl;
+		}
+		for(int i=0; i < MAX_OUT_PORT; i++)
+		{
+			if( (*citr)->tx_ports[i] != NULL)
+				cout << "Output Port " << i << " active" << endl;
+		}
+		//(*citr)->rx_ports[1]->Write(m);
+		(*citr)->start();
+	}	
+	dlclose(dlib);	
+
+	return 0;
+}
+void load_libs()
+{
+	void *tlib;
+	tlib = dlopen("comm/files/InputFile.so",RTLD_NOW);
+	if(tlib == NULL)
+	{
+		cout << "erro opening So" << endl;
+		char *errstr;
+		errstr = dlerror();
+		if (errstr != NULL)
+		cerr << "A dynamic linking error occurred: " << errstr << endl;
+	}
+	gCommLib.push_back(tlib);
+	gCommFactory["InputFile"]();
+		
+}
+void close_libs()
+{
+	list<void *>::iterator i;
+	 for(i=gCommLib.begin(); i != gCommLib.end(); ++i)
+		dlclose((*i));
+}
+
+int parse_args(int argc, char *argv[])
+{
+	int largc = 0;
+	char *p;
+	for(largc=1;largc < argc;largc++)
+	{
+		p = argv[largc];
+		if(!strcmp(p,"-c"))
+			comp_so = argv[largc+1];
+		
+	}//for
+	return 0;
+}

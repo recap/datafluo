@@ -1,0 +1,391 @@
+init:
+Deleting: /home/reggie/workspace/datafluo-vlam/datafluo-vlam/proto.freefluo-vlam/build/built-jar.properties
+deps-jar:
+Updating property file: /home/reggie/workspace/datafluo-vlam/datafluo-vlam/proto.freefluo-vlam/build/built-jar.properties
+freefluo.init:
+freefluo.deps-jar:
+Updating property file: /home/reggie/workspace/datafluo-vlam/datafluo-vlam/proto.freefluo-vlam/build/built-jar.properties
+freefluo.compile:
+Copy libraries to /home/reggie/workspace/datafluo-vlam/datafluo-vlam/datafluo/dist/lib.
+freefluo.jar:
+compile:
+run:
+proto.wsvlam.wsengine.VlamWFParser: Cast from nl.wtcw.vle.wfd.impl.Axis.TopologyAxis
+proto.wsvlam.wsengine.VlamWFParser: ------------instanceof TopologyI----------------
+proto.wsvlam.wsengine.VlamWFParser: FDRThresholdVL:fdr_threshold connected to SigWinSelectVL:fdr_threshold
+proto.wsvlam.wsengine.VlamWFParser: RankVL:rank connected to SWMedianVL:rank
+proto.wsvlam.wsengine.VlamWFParser: RankVL:sorted_list connected to SWMedianProbVL:sorted_list
+proto.wsvlam.wsengine.VlamWFParser: RankVL:sorted_set connected to FDRThresholdVL:x_axis
+proto.wsvlam.wsengine.VlamWFParser: RankVL:sorted_set connected to Sample2FreqVL:x_axis
+proto.wsvlam.wsengine.VlamWFParser: SigWinPlotGraceVL:grace_file connected to LocalFileWriter:output_file
+proto.wsvlam.wsengine.VlamWFParser: SWMedianVL:sw_data connected to Sample2FreqVL:samples
+proto.wsvlam.wsengine.VlamWFParser: SWMedianVL:sw_data connected to SigWinSelectVL:sw_data
+proto.wsvlam.wsengine.VlamWFParser: SWMedianVL:sw_parameters connected to SigWinSelectVL:sw_parameters
+proto.wsvlam.wsengine.VlamWFParser: SWMedianVL:sw_parameters connected to SigWinPlotGraceVL:sw_parameters
+proto.wsvlam.wsengine.VlamWFParser: SWMedianVL:sw_parameters connected to SWMedianProbVL:sw_parameters
+proto.wsvlam.wsengine.VlamWFParser: SigWinSelectVL:data_file_name connected to SigWinPlotGraceVL:data_file_names
+proto.wsvlam.wsengine.VlamWFParser: Sample2FreqVL:frequencies connected to FDRThresholdVL:frequencies
+proto.wsvlam.wsengine.VlamWFParser: ColumnReaderVL:sequence connected to RankVL:sequence
+proto.wsvlam.wsengine.VlamWFParser: LocalFileReader:input_file connected to ColumnReaderVL:input_file
+proto.wsvlam.wsengine.VlamWFParser: SWMedianProbVL:probabilities connected to FDRThresholdVL:probabilities
+proto.wsvlam.wsengine.VlamDatafluoTask.1cfbf91a-8212-4b98-bb90-d92b5de241b7: FIRING: LocalFileReader
+
+proto.wsvlam.wsengine.VlamDatafluoTask.1cfbf91a-8212-4b98-bb90-d92b5de241b7: /home/reggie/VLPORT2/TempAms.dat
+proto.wsvlam.wsengine.VlamDatafluoTask.1cfbf91a-8212-4b98-bb90-d92b5de241b7: Putting Messge: Message: 
+        source: sorce
+        destination: dest
+        length: 206083
+        seq: 1
+        message: File://home/reggie/VLPORT2/TempAms.dat
+
+proto.wsvlam.wsengine.VlamDatafluoTask.88c60ca6-ccb0-46fa-9f64-db10faa5d547: FIRING: ColumnReaderVL
+
+Adding task: ColumnReaderVL to runnable queue.
+submitting task: ColumnReaderVL to MySubmitter
+COMMAND: /home/reggie/workspace/vlport2/vlport2d/src//vlport2 -s 127.0.0.1 -p 5555 -i 88c60ca6-ccb0-46fa-9f64-db10faa5d547
+ReactorCommand: GET_CONFIG
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 58
+CommandHandler: MAIL QUEUE: 23583040ID.88c60ca6-ccb0-46fa-9f64-db10faa5d547.input_file
+CommandHandler: MESSAGE: Message: 
+        source: sorce
+        destination: dest
+        length: 206083
+        seq: 1
+        message: File://home/reggie/VLPORT2/TempAms.dat
+
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 58
+CommandHandler: MAIL QUEUE: 23583040ID.88c60ca6-ccb0-46fa-9f64-db10faa5d547.input_file
+CommandHandler: PORT DESTROYED.
+ReactorCommand: POST_MAIL
+CommandHandler: In Post
+CommandHandler: QUEUE_UID: 23583040ID.88c60ca6-ccb0-46fa-9f64-db10faa5d547.sequence
+proto.wsvlam.wsengine.VlamDatafluoTask.660f493f-4e08-45c6-b6e4-1e1c2976407b: FIRING: RankVL
+Adding task: RankVL to runnable queue.
+
+submitting task: RankVL to MySubmitter
+COMMAND: /home/reggie/workspace/vlport2/vlport2d/src//vlport2 -s 127.0.0.1 -p 5555 -i 660f493f-4e08-45c6-b6e4-1e1c2976407b
+ReactorCommand: GET_CONFIG
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 56
+CommandHandler: MAIL QUEUE: 23583040ID.660f493f-4e08-45c6-b6e4-1e1c2976407b.sequence
+CommandHandler: MESSAGE: Message: 
+        source: null
+        destination: null
+        length: 0
+        seq: 0
+        message: File:///home/reggie/workspace/vlport2/vlport2d/src/ColumnReaderVL_sequence1.rst
+
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 56
+CommandHandler: MAIL QUEUE: 23583040ID.660f493f-4e08-45c6-b6e4-1e1c2976407b.sequence
+CommandHandler: NO_MAIL
+ReactorCommand: POST_MAIL
+ReactorCommand: POST_MAIL
+CommandHandler: In Post
+CommandHandler: QUEUE_UID: 23583040ID.660f493f-4e08-45c6-b6e4-1e1c2976407b.rank
+ReactorCommand: POST_MAIL
+CommandHandler: In Post
+CommandHandler: QUEUE_UID: 23583040ID.660f493f-4e08-45c6-b6e4-1e1c2976407b.sorted_set
+CommandHandler: In Post
+Adding task: SWMedianVL to runnable queue.
+CommandHandler: QUEUE_UID: 23583040ID.660f493f-4e08-45c6-b6e4-1e1c2976407b.sorted_list
+submitting task: SWMedianVL to MySubmitter
+proto.wsvlam.wsengine.VlamDatafluoTask.729e69eb-1e87-442d-b2ad-baff2ff1cdd9: FIRING: SWMedianVL
+COMMAND: /home/reggie/workspace/vlport2/vlport2d/src//vlport2 -s 127.0.0.1 -p 5555 -i 729e69eb-1e87-442d-b2ad-baff2ff1cdd9
+
+ReactorCommand: GET_CONFIG
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 52
+CommandHandler: MAIL QUEUE: 23583040ID.729e69eb-1e87-442d-b2ad-baff2ff1cdd9.rank
+CommandHandler: MESSAGE: Message: 
+        source: null
+        destination: null
+        length: 0
+        seq: 0
+        message: File:///home/reggie/workspace/vlport2/vlport2d/src/RankVL_rank1.rst
+
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 52
+CommandHandler: MAIL QUEUE: 23583040ID.729e69eb-1e87-442d-b2ad-baff2ff1cdd9.rank
+CommandHandler: NO_MAIL
+ReactorCommand: COMPLETE
+ReactorCommand: COMPLETE taskid: 88c60ca6-ccb0-46fa-9f64-db10faa5d547
+ReactorCommand: POST_MAIL
+CommandHandler: In Post
+CommandHandler: QUEUE_UID: 23583040ID.729e69eb-1e87-442d-b2ad-baff2ff1cdd9.sw_parameters
+proto.wsvlam.wsengine.VlamDatafluoTask.fb466ec3-3c90-46a6-bae8-a7f8d6884931: FIRING: SWMedianProbVL
+Adding task: SWMedianProbVL to runnable queue.
+
+ReactorCommand: POST_MAIL
+CommandHandler: In Post
+submitting task: SWMedianProbVL to MySubmitter
+CommandHandler: QUEUE_UID: 23583040ID.729e69eb-1e87-442d-b2ad-baff2ff1cdd9.sw_data
+COMMAND: /home/reggie/workspace/vlport2/vlport2d/src//vlport2 -s 127.0.0.1 -p 5555 -i fb466ec3-3c90-46a6-bae8-a7f8d6884931
+proto.wsvlam.wsengine.VlamDatafluoTask.340c238c-e853-494d-a877-92be6d27c77f: FIRING: Sample2FreqVL
+
+Adding task: Sample2FreqVL to runnable queue.
+submitting task: Sample2FreqVL to MySubmitter
+COMMAND: /home/reggie/workspace/vlport2/vlport2d/src//vlport2 -s 127.0.0.1 -p 5555 -i 340c238c-e853-494d-a877-92be6d27c77f
+ReactorCommand: GET_CONFIG
+ReactorCommand: GET_CONFIG
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 56
+CommandHandler: MAIL QUEUE: 23583040ID.660f493f-4e08-45c6-b6e4-1e1c2976407b.sequence
+CommandHandler: PORT DESTROYED.
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 61
+CommandHandler: MAIL QUEUE: 23583040ID.fb466ec3-3c90-46a6-bae8-a7f8d6884931.sw_parameters
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 59
+CommandHandler: MAIL QUEUE: 23583040ID.fb466ec3-3c90-46a6-bae8-a7f8d6884931.sorted_list
+CommandHandler: MESSAGE: Message: 
+        source: null
+        destination: null
+        length: 0
+        seq: 0
+        message: File:///home/reggie/workspace/vlport2/vlport2d/src/RankVL_sorted_list2.rst
+
+CommandHandler: MESSAGE: Message: 
+        source: null
+        destination: null
+        length: 0
+        seq: 0
+        message: File:///home/reggie/workspace/vlport2/vlport2d/src/SWMedianVL_sw_parameters1.rst
+
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 61
+CommandHandler: MAIL QUEUE: 23583040ID.fb466ec3-3c90-46a6-bae8-a7f8d6884931.sw_parameters
+CommandHandler: NO_MAIL
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 54
+CommandHandler: MAIL QUEUE: 23583040ID.340c238c-e853-494d-a877-92be6d27c77f.x_axis
+CommandHandler: MESSAGE: Message: 
+        source: null
+        destination: null
+        length: 0
+        seq: 0
+        message: File:///home/reggie/workspace/vlport2/vlport2d/src/RankVL_sorted_set3.rst
+
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 59
+CommandHandler: MAIL QUEUE: 23583040ID.fb466ec3-3c90-46a6-bae8-a7f8d6884931.sorted_list
+CommandHandler: NO_MAIL
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 55
+CommandHandler: MAIL QUEUE: 23583040ID.340c238c-e853-494d-a877-92be6d27c77f.samples
+CommandHandler: MESSAGE: Message: 
+        source: null
+        destination: null
+        length: 0
+        seq: 0
+        message: File:///home/reggie/workspace/vlport2/vlport2d/src/SWMedianVL_sw_data2.rst
+
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 54
+CommandHandler: MAIL QUEUE: 23583040ID.340c238c-e853-494d-a877-92be6d27c77f.x_axis
+CommandHandler: NO_MAIL
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 55
+CommandHandler: MAIL QUEUE: 23583040ID.340c238c-e853-494d-a877-92be6d27c77f.samples
+CommandHandler: NO_MAIL
+ReactorCommand: COMPLETE
+ReactorCommand: COMPLETE taskid: 660f493f-4e08-45c6-b6e4-1e1c2976407b
+ReactorCommand: POST_MAIL
+CommandHandler: In Post
+CommandHandler: QUEUE_UID: 23583040ID.fb466ec3-3c90-46a6-bae8-a7f8d6884931.probabilities
+ReactorCommand: POST_MAIL
+CommandHandler: In Post
+CommandHandler: QUEUE_UID: 23583040ID.340c238c-e853-494d-a877-92be6d27c77f.frequencies
+Adding task: FDRThresholdVL to runnable queue.
+submitting task: FDRThresholdVL to MySubmitter
+proto.wsvlam.wsengine.VlamDatafluoTask.4798e497-6fce-432d-8c5f-c4ba348547dc: FIRING: FDRThresholdVL
+COMMAND: /home/reggie/workspace/vlport2/vlport2d/src//vlport2 -s 127.0.0.1 -p 5555 -i 4798e497-6fce-432d-8c5f-c4ba348547dc
+
+ReactorCommand: GET_CONFIG
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 52
+CommandHandler: MAIL QUEUE: 23583040ID.729e69eb-1e87-442d-b2ad-baff2ff1cdd9.rank
+CommandHandler: PORT DESTROYED.
+ReactorCommand: CHECK_MAIL
+ReactorCommand: CHECK_MAIL
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 61
+CommandHandler: MAIL QUEUE: 23583040ID.4798e497-6fce-432d-8c5f-c4ba348547dc.probabilities
+CommandHandler: MESSAGE: Message: 
+        source: null
+        destination: null
+        length: 0
+        seq: 0
+        message: File:///home/reggie/workspace/vlport2/vlport2d/src/SWMedianProbVL_probabilities1.rst
+
+CommandHandler: RECEIVED: 54
+CommandHandler: MAIL QUEUE: 23583040ID.4798e497-6fce-432d-8c5f-c4ba348547dc.x_axis
+CommandHandler: MESSAGE: Message: 
+        source: null
+        destination: null
+        length: 0
+        seq: 0
+        message: File:///home/reggie/workspace/vlport2/vlport2d/src/RankVL_sorted_set3.rst
+
+CommandHandler: RECEIVED: 59
+CommandHandler: MAIL QUEUE: 23583040ID.4798e497-6fce-432d-8c5f-c4ba348547dc.frequencies
+CommandHandler: MESSAGE: Message: 
+        source: null
+        destination: null
+        length: 0
+        seq: 0
+        message: File:///home/reggie/workspace/vlport2/vlport2d/src/Sample2FreqVL_frequencies1.rst
+
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 54
+CommandHandler: MAIL QUEUE: 23583040ID.4798e497-6fce-432d-8c5f-c4ba348547dc.x_axis
+CommandHandler: PORT DESTROYED.
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 61
+CommandHandler: MAIL QUEUE: 23583040ID.4798e497-6fce-432d-8c5f-c4ba348547dc.probabilities
+CommandHandler: NO_MAIL
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 59
+CommandHandler: MAIL QUEUE: 23583040ID.4798e497-6fce-432d-8c5f-c4ba348547dc.frequencies
+CommandHandler: NO_MAIL
+ReactorCommand: POST_MAIL
+CommandHandler: In Post
+CommandHandler: QUEUE_UID: 23583040ID.4798e497-6fce-432d-8c5f-c4ba348547dc.fdr_threshold
+proto.wsvlam.wsengine.VlamDatafluoTask.65d41075-9a6b-4454-b617-574dae9eab3f: FIRING: SigWinSelectVL
+
+Adding task: SigWinSelectVL to runnable queue.
+submitting task: SigWinSelectVL to MySubmitter
+COMMAND: /home/reggie/workspace/vlport2/vlport2d/src//vlport2 -s 127.0.0.1 -p 5555 -i 65d41075-9a6b-4454-b617-574dae9eab3f
+ReactorCommand: GET_CONFIG
+ReactorCommand: COMPLETE
+ReactorCommand: COMPLETE taskid: 729e69eb-1e87-442d-b2ad-baff2ff1cdd9
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 61
+CommandHandler: MAIL QUEUE: 23583040ID.65d41075-9a6b-4454-b617-574dae9eab3f.sw_parameters
+CommandHandler: MESSAGE: Message: 
+        source: null
+        destination: null
+        length: 0
+        seq: 0
+        message: File:///home/reggie/workspace/vlport2/vlport2d/src/SWMedianVL_sw_parameters1.rst
+
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 61
+CommandHandler: MAIL QUEUE: 23583040ID.65d41075-9a6b-4454-b617-574dae9eab3f.fdr_threshold
+CommandHandler: MESSAGE: Message: 
+        source: null
+        destination: null
+        length: 0
+        seq: 0
+        message: File:///home/reggie/workspace/vlport2/vlport2d/src/FDRThresholdVL_fdr_threshold1.rst
+
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 55
+CommandHandler: MAIL QUEUE: 23583040ID.65d41075-9a6b-4454-b617-574dae9eab3f.sw_data
+CommandHandler: MESSAGE: Message: 
+        source: null
+        destination: null
+        length: 0
+        seq: 0
+        message: File:///home/reggie/workspace/vlport2/vlport2d/src/SWMedianVL_sw_data2.rst
+
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 61
+CommandHandler: MAIL QUEUE: 23583040ID.65d41075-9a6b-4454-b617-574dae9eab3f.sw_parameters
+CommandHandler: PORT DESTROYED.
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 61
+CommandHandler: MAIL QUEUE: 23583040ID.65d41075-9a6b-4454-b617-574dae9eab3f.fdr_threshold
+CommandHandler: NO_MAIL
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 55
+CommandHandler: MAIL QUEUE: 23583040ID.65d41075-9a6b-4454-b617-574dae9eab3f.sw_data
+CommandHandler: PORT DESTROYED.
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 61
+CommandHandler: MAIL QUEUE: 23583040ID.fb466ec3-3c90-46a6-bae8-a7f8d6884931.sw_parameters
+CommandHandler: PORT DESTROYED.
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 59
+CommandHandler: MAIL QUEUE: 23583040ID.fb466ec3-3c90-46a6-bae8-a7f8d6884931.sorted_list
+CommandHandler: PORT DESTROYED.
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 54
+CommandHandler: MAIL QUEUE: 23583040ID.340c238c-e853-494d-a877-92be6d27c77f.x_axis
+CommandHandler: PORT DESTROYED.
+ReactorCommand: POST_MAIL
+CommandHandler: In Post
+Adding task: SigWinPlotGraceVL to runnable queue.
+CommandHandler: QUEUE_UID: 23583040ID.65d41075-9a6b-4454-b617-574dae9eab3f.data_file_name
+submitting task: SigWinPlotGraceVL to MySubmitter
+proto.wsvlam.wsengine.VlamDatafluoTask.f7fcb8d5-a07b-4bd2-8108-647e27103f92: FIRING: SigWinPlotGraceVL
+COMMAND: /home/reggie/workspace/vlport2/vlport2d/src//vlport2 -s 127.0.0.1 -p 5555 -i f7fcb8d5-a07b-4bd2-8108-647e27103f92
+
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 55
+CommandHandler: MAIL QUEUE: 23583040ID.340c238c-e853-494d-a877-92be6d27c77f.samples
+CommandHandler: PORT DESTROYED.
+ReactorCommand: GET_CONFIG
+ReactorCommand: COMPLETE
+ReactorCommand: COMPLETE taskid: fb466ec3-3c90-46a6-bae8-a7f8d6884931
+ReactorCommand: COMPLETE
+ReactorCommand: COMPLETE taskid: 340c238c-e853-494d-a877-92be6d27c77f
+ReactorCommand: CHECK_MAIL
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 63
+CommandHandler: MAIL QUEUE: 23583040ID.f7fcb8d5-a07b-4bd2-8108-647e27103f92.data_file_names
+CommandHandler: MESSAGE: Message: 
+        source: null
+        destination: null
+        length: 0
+        seq: 0
+        message: File:///home/reggie/workspace/vlport2/vlport2d/src/SigWinSelectVL_data_file_name1.rst
+
+CommandHandler: RECEIVED: 61
+CommandHandler: MAIL QUEUE: 23583040ID.f7fcb8d5-a07b-4bd2-8108-647e27103f92.sw_parameters
+CommandHandler: MESSAGE: Message: 
+        source: null
+        destination: null
+        length: 0
+        seq: 0
+        message: File:///home/reggie/workspace/vlport2/vlport2d/src/SWMedianVL_sw_parameters1.rst
+
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 61
+CommandHandler: MAIL QUEUE: 23583040ID.f7fcb8d5-a07b-4bd2-8108-647e27103f92.sw_parameters
+CommandHandler: PORT DESTROYED.
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 63
+CommandHandler: MAIL QUEUE: 23583040ID.f7fcb8d5-a07b-4bd2-8108-647e27103f92.data_file_names
+CommandHandler: NO_MAIL
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 61
+CommandHandler: MAIL QUEUE: 23583040ID.4798e497-6fce-432d-8c5f-c4ba348547dc.probabilities
+CommandHandler: PORT DESTROYED.
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 59
+CommandHandler: MAIL QUEUE: 23583040ID.4798e497-6fce-432d-8c5f-c4ba348547dc.frequencies
+CommandHandler: PORT DESTROYED.
+ReactorCommand: POST_MAIL
+CommandHandler: In Post
+CommandHandler: QUEUE_UID: 23583040ID.f7fcb8d5-a07b-4bd2-8108-647e27103f92.grace_file
+proto.wsvlam.wsengine.VlamDatafluoTask.50b6ae46-ce96-41d7-85fa-9de50366c303: FIRING: LocalFileWriter
+
+proto.wsvlam.wsengine.VlamDatafluoTask.50b6ae46-ce96-41d7-85fa-9de50366c303: RESULT: File:///home/reggie/workspace/vlport2/vlport2d/src/SigWinPlotGraceVL_grace_file1.rst
+ReactorCommand: COMPLETE
+ReactorCommand: COMPLETE taskid: 4798e497-6fce-432d-8c5f-c4ba348547dc
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 61
+CommandHandler: MAIL QUEUE: 23583040ID.65d41075-9a6b-4454-b617-574dae9eab3f.fdr_threshold
+CommandHandler: PORT DESTROYED.
+ReactorCommand: COMPLETE
+ReactorCommand: COMPLETE taskid: 65d41075-9a6b-4454-b617-574dae9eab3f
+ReactorCommand: CHECK_MAIL
+CommandHandler: RECEIVED: 63
+CommandHandler: MAIL QUEUE: 23583040ID.f7fcb8d5-a07b-4bd2-8108-647e27103f92.data_file_names
+CommandHandler: PORT DESTROYED.
+ReactorCommand: COMPLETE
+ReactorCommand: COMPLETE taskid: f7fcb8d5-a07b-4bd2-8108-647e27103f92
+

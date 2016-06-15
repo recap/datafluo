@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Module>
+	<Name>myComponent</Name>
+	<URL>components/myComponent/myComponent.so</URL>
+	<Ports>
+		<InputPort type="file">
+			<Number>1<Number>
+			<URL>testfile1.txt<URL>
+		</InputPort>
+		<InputPort type="file">
+			<Number>2</Number>
+			<URL>testfile2.txt</URL>
+		</InputPort>
+		<OutputPort type="file">
+			<Number>1</Number>
+			<URL>dump.txt</URL>
+		</OutputPort>		
+	</Ports>
+</Module>

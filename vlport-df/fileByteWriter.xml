@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:VLEAtomicModule xsi:type="ns1:VLEAtomicModule" xmlns:ns1="http://vle.wtcw.nl/htopology" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <instanceID xsi:type="xsd:string" xsi:nil="true" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+ <name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">fileByteWriter</name>
+ <arguments xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"></arguments>
+ <VLEParameter type="string" xsi:type="ns1:VLEParameter">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">filename</Name>
+  <Value xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">out_xxx.txt</Value>
+ </VLEParameter>
+ <VLEInputPort type="byte[]" xsi:type="ns1:VLEInputPort">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">InputPort</Name>
+ </VLEInputPort>
+ <host xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"></host>
+</ns1:VLEAtomicModule>

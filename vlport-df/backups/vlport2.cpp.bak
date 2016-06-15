@@ -1,0 +1,104 @@
+#include <iostream>
+#include <map>
+#include <utility>
+#include <vector>
+#include <string>
+#include <list>
+
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <dlfcn.h>
+
+//#include "comm/comm.hh"
+//#include "components/component.hh"
+//#include "components/mycfile.hh"
+#include "common/IComponent.h"
+
+
+using namespace std;
+int parse_args(int argc,char* argv[]);
+char *comp_so = NULL;
+map<string, maker_t *, less<string> > factory;
+
+
+int main(int argc, char *argv[])
+{
+	cout << "Starting vlport2\n";
+	if(parse_args(argc,argv) == -1)
+		return -1;
+
+		
+	void *dlib;
+	map<string, maker_t *, less<string> >::iterator fitr;
+	list<IComponent *> comp_list;
+	list<IComponent *>::iterator citr;
+
+	dlib = dlopen(comp_so,RTLD_NOW);
+
+/*	int (*fn)(int *);
+	int (*iptr)();
+	int x;
+	*(void **)(&fn) = dlsym(dlib,"ctest1");
+	(*fn)(&x);
+	cout << "Valx= " << x << endl;
+
+
+	//*(void **) (*iptr) = dlsym(dlib,"*fptr");
+	iptr = (int(*)) dlsym(dlib,"fptr");
+	if(iptr == NULL)
+		cout << "err" << endl;
+	(*iptr)();
+	x = (int)dlsym(dlib,"k");
+	cout << k << endl;
+	return -1;*/
+
+	if(dlib == NULL){
+
+		cerr << "Error" << endl;
+		char *errstr;
+		errstr = dlerror();
+		if (errstr != NULL)
+		cout << "A dynamic linking error occurred: " << errstr << endl;
+		return -1;
+	}
+	for(fitr=factory.begin(); fitr != factory.end(); fitr++)
+	{
+		cout << fitr->first << "\n";
+//		factory[fitr->first]()->start();
+//		factory[fitr->first]()->stop();
+	}
+	
+	comp_list.insert(comp_list.end(),factory["myComponent"]());
+	for(citr=comp_list.begin(); citr!=comp_list.end();citr++)
+	{
+		(*citr)->rx_ports[1]->callback();
+		(*citr)->rx_ports[2]->callback();
+		(*citr)->start();
+		(*citr)->stop();
+		//(*citr)->dummy();
+	//	(*(*citr).*in_ports[0])();
+	//	cout << (*citr)->p << endl;
+
+		//(*citr->*in_ports[0])(NULL);
+	}	
+	dlclose(dlib);	
+	//char *com_str = 	
+
+
+	return 0;
+}
+
+int parse_args(int argc, char *argv[])
+{
+	int largc = 0;
+	char *p;
+	for(largc=1;largc < argc;largc++)
+	{
+		p = argv[largc];
+		if(!strcmp(p,"-c"))
+			comp_so = argv[largc+1];
+		
+	}//for
+	return 0;
+}

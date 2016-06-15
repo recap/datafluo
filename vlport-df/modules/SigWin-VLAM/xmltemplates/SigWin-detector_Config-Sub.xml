@@ -1,0 +1,4239 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.5.0_07" class="java.beans.XMLDecoder"> 
+ <object class="nl.wtcw.vle.wfd.impl.Axis.TopologyAxis"> 
+  <object class="java.util.LinkedList"> 
+   <void method="add"> 
+    <object id="AtomicModuleAxis0" class="nl.wtcw.vle.wfd.impl.Axis.AtomicModuleAxis"> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object id="InputPortAxis0" class="nl.wtcw.vle.wfd.impl.Axis.InputPortAxis"> 
+        <void property="name"> 
+         <string>sequence</string> 
+        </void> 
+        <void property="type"> 
+         <string>/array</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object id="OutputPortAxis0" class="nl.wtcw.vle.wfd.impl.Axis.OutputPortAxis"> 
+        <void property="name"> 
+         <string>rank</string> 
+        </void> 
+        <void property="type"> 
+         <string>/Rank</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object id="OutputPortAxis1" class="nl.wtcw.vle.wfd.impl.Axis.OutputPortAxis"> 
+        <void property="name"> 
+         <string>sorted_list</string> 
+        </void> 
+        <void property="type"> 
+         <string>/array/sorted_list</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object id="OutputPortAxis2" class="nl.wtcw.vle.wfd.impl.Axis.OutputPortAxis"> 
+        <void property="name"> 
+         <string>sorted_set</string> 
+        </void> 
+        <void property="type"> 
+         <string>/array/sorted_list/sorted_set</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>datatype</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>d</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>write_to</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>all</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>log_level</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>Info</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>test_ports</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>all</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <string></string> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.CategoryAxis"> 
+        <string>Bioinformatics-SP1.5</string> 
+        <string>150002</string> 
+        <string>http://staff.science.uva.nl/~inda/SigWin-detector/html/modules.html</string> 
+        <string>Arrays</string> 
+       </object> 
+      </void> 
+     </object> 
+     <string>159309945</string> 
+     <string>Rank</string> 
+     <string>fs2.das3.science.uva.nl</string> 
+     <null/> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object id="AtomicModuleAxis1" class="nl.wtcw.vle.wfd.impl.Axis.AtomicModuleAxis"> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object id="InputPortAxis1" class="nl.wtcw.vle.wfd.impl.Axis.InputPortAxis"> 
+        <void property="name"> 
+         <string>rank</string> 
+        </void> 
+        <void property="type"> 
+         <string>/Rank</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object id="OutputPortAxis3" class="nl.wtcw.vle.wfd.impl.Axis.OutputPortAxis"> 
+        <void property="name"> 
+         <string>sw_parameters</string> 
+        </void> 
+        <void property="type"> 
+         <string>/SWParameters</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object id="OutputPortAxis4" class="nl.wtcw.vle.wfd.impl.Axis.OutputPortAxis"> 
+        <void property="name"> 
+         <string>sw_data</string> 
+        </void> 
+        <void property="type"> 
+         <string>/array</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>datatype</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>d</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>min_window_size</string> 
+        </void> 
+        <void property="type"> 
+         <string>integer</string> 
+        </void> 
+        <void property="value"> 
+         <string>1</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>max_window_size</string> 
+        </void> 
+        <void property="type"> 
+         <string>integer</string> 
+        </void> 
+        <void property="value"> 
+         <string>2700</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>step_size</string> 
+        </void> 
+        <void property="type"> 
+         <string>integer</string> 
+        </void> 
+        <void property="value"> 
+         <string>10</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>write_parameters</string> 
+        </void> 
+        <void property="type"> 
+         <string>bool</string> 
+        </void> 
+        <void property="value"> 
+         <string>true</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>log_level</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>Info</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>test_ports</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>all</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <string></string> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.CategoryAxis"> 
+        <string>Bioinformatics-SP1.5</string> 
+        <string>150005</string> 
+        <string>http://staff.science.uva.nl/~inda/SigWin-detector/html/modules.html</string> 
+        <string>SlidingWindows</string> 
+       </object> 
+      </void> 
+     </object> 
+     <string>47135559</string> 
+     <string>SWMedian</string> 
+     <string>fs2.das3.science.uva.nl</string> 
+     <null/> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object id="AtomicModuleAxis2" class="nl.wtcw.vle.wfd.impl.Axis.AtomicModuleAxis"> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object id="InputPortAxis2" class="nl.wtcw.vle.wfd.impl.Axis.InputPortAxis"> 
+        <void property="name"> 
+         <string>sw_parameters</string> 
+        </void> 
+        <void property="type"> 
+         <string>/SWParameters</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object id="InputPortAxis3" class="nl.wtcw.vle.wfd.impl.Axis.InputPortAxis"> 
+        <void property="name"> 
+         <string>sorted_list</string> 
+        </void> 
+        <void property="type"> 
+         <string>/array/sorted_list</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object id="OutputPortAxis5" class="nl.wtcw.vle.wfd.impl.Axis.OutputPortAxis"> 
+        <void property="name"> 
+         <string>probabilities</string> 
+        </void> 
+        <void property="type"> 
+         <string>/array</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>input_datatype</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>d</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>output_datatype</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>d</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>log_level</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>Info</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>test_ports</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>all</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <string></string> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.CategoryAxis"> 
+        <string>Bioinformatics-SP1.5</string> 
+        <string>150005</string> 
+        <string>http://staff.science.uva.nl/~inda/SigWin-detector/html/modules.html</string> 
+        <string>SlidingWindows</string> 
+       </object> 
+      </void> 
+     </object> 
+     <string>388780295</string> 
+     <string>SWMedianProb</string> 
+     <string>fs2.das3.science.uva.nl</string> 
+     <null/> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object id="AtomicModuleAxis3" class="nl.wtcw.vle.wfd.impl.Axis.AtomicModuleAxis"> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object id="InputPortAxis4" class="nl.wtcw.vle.wfd.impl.Axis.InputPortAxis"> 
+        <void property="name"> 
+         <string>samples</string> 
+        </void> 
+        <void property="type"> 
+         <string>/array</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object id="InputPortAxis5" class="nl.wtcw.vle.wfd.impl.Axis.InputPortAxis"> 
+        <void property="name"> 
+         <string>x_axis</string> 
+        </void> 
+        <void property="type"> 
+         <string>/array/sorted_list/sorted_set</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object id="OutputPortAxis6" class="nl.wtcw.vle.wfd.impl.Axis.OutputPortAxis"> 
+        <void property="name"> 
+         <string>frequencies</string> 
+        </void> 
+        <void property="type"> 
+         <string>/array</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>input_datatype</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>d</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>output_datatype</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>d</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>normalize</string> 
+        </void> 
+        <void property="type"> 
+         <string>bool</string> 
+        </void> 
+        <void property="value"> 
+         <string>true</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>log_level</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>Info</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>test_ports</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>all</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <string></string> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.CategoryAxis"> 
+        <string>Bioinformatics-SP1.5</string> 
+        <string>150002</string> 
+        <string>http://staff.science.uva.nl/~inda/SigWin-detector/html/modules.html</string> 
+        <string>Arrays</string> 
+       </object> 
+      </void> 
+     </object> 
+     <string>583869033</string> 
+     <string>Sample2Freq</string> 
+     <string>fs2.das3.science.uva.nl</string> 
+     <null/> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object id="AtomicModuleAxis4" class="nl.wtcw.vle.wfd.impl.Axis.AtomicModuleAxis"> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object id="InputPortAxis6" class="nl.wtcw.vle.wfd.impl.Axis.InputPortAxis"> 
+        <void property="name"> 
+         <string>probabilities</string> 
+        </void> 
+        <void property="type"> 
+         <string>/array</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object id="InputPortAxis7" class="nl.wtcw.vle.wfd.impl.Axis.InputPortAxis"> 
+        <void property="name"> 
+         <string>frequencies</string> 
+        </void> 
+        <void property="type"> 
+         <string>/array</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object id="InputPortAxis8" class="nl.wtcw.vle.wfd.impl.Axis.InputPortAxis"> 
+        <void property="name"> 
+         <string>x_axis</string> 
+        </void> 
+        <void property="type"> 
+         <string>/array/sorted_list/sorted_set</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object id="OutputPortAxis7" class="nl.wtcw.vle.wfd.impl.Axis.OutputPortAxis"> 
+        <void property="name"> 
+         <string>fdr_threshold</string> 
+        </void> 
+        <void property="type"> 
+         <string>/number</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>datatype_thresh</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>d</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>datatype_distr</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>d</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>FDR_level</string> 
+        </void> 
+        <void property="type"> 
+         <string>float</string> 
+        </void> 
+        <void property="value"> 
+         <string>0.05</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>threshold</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>high</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>log_level</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>Info</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>test_ports</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>all</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <string></string> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.CategoryAxis"> 
+        <string>Bioinformatics-SP1.5</string> 
+        <string>150002</string> 
+        <string>http://staff.science.uva.nl/~inda/SigWin-detector/html/modules.html</string> 
+        <string>Arrays</string> 
+       </object> 
+      </void> 
+     </object> 
+     <string>358035224</string> 
+     <string>FDRThreshold</string> 
+     <string>fs2.das3.science.uva.nl</string> 
+     <null/> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object id="AtomicModuleAxis5" class="nl.wtcw.vle.wfd.impl.Axis.AtomicModuleAxis"> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object id="InputPortAxis9" class="nl.wtcw.vle.wfd.impl.Axis.InputPortAxis"> 
+        <void property="name"> 
+         <string>sw_parameters</string> 
+        </void> 
+        <void property="type"> 
+         <string>/SWParameters</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object id="InputPortAxis10" class="nl.wtcw.vle.wfd.impl.Axis.InputPortAxis"> 
+        <void property="name"> 
+         <string>data_file_names</string> 
+        </void> 
+        <void property="type"> 
+         <string>/string</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object id="OutputPortAxis8" class="nl.wtcw.vle.wfd.impl.Axis.OutputPortAxis"> 
+        <void property="name"> 
+         <string>grace_file</string> 
+        </void> 
+        <void property="type"> 
+         <string>/file</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>separation</string> 
+        </void> 
+        <void property="type"> 
+         <string>float</string> 
+        </void> 
+        <void property="value"> 
+         <string>0.2</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>ratio</string> 
+        </void> 
+        <void property="type"> 
+         <string>float</string> 
+        </void> 
+        <void property="value"> 
+         <string>1</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>full_border</string> 
+        </void> 
+        <void property="type"> 
+         <string>bool</string> 
+        </void> 
+        <void property="value"> 
+         <string>false</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>log_level</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>Info</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>test_ports</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>all</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <string></string> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.CategoryAxis"> 
+        <string>Bioinformatics-SP1.5</string> 
+        <string>150006</string> 
+        <string>http://staff.science.uva.nl/~inda/SigWin-detector/html/modules.html</string> 
+        <string>SigWin</string> 
+       </object> 
+      </void> 
+     </object> 
+     <string>1344663929</string> 
+     <string>SigWinPlotGrace</string> 
+     <string>fs2.das3.science.uva.nl</string> 
+     <null/> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object id="AtomicModuleAxis6" class="nl.wtcw.vle.wfd.impl.Axis.AtomicModuleAxis"> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object id="InputPortAxis11" class="nl.wtcw.vle.wfd.impl.Axis.InputPortAxis"> 
+        <void property="name"> 
+         <string>xmgrace_file</string> 
+        </void> 
+        <void property="type"> 
+         <string>/file</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <object class="java.util.LinkedList"/> 
+     <object class="java.util.LinkedList"/> 
+     <string></string> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.CategoryAxis"> 
+        <string>Bioinformatics-SP1.5</string> 
+        <string>150004</string> 
+        <string>http://staff.science.uva.nl/~inda/SigWin-detector/html/modules.html</string> 
+        <string>Graphics</string> 
+       </object> 
+      </void> 
+     </object> 
+     <string>111849071</string> 
+     <string>XmGrace</string> 
+     <string>fs2.das3.science.uva.nl/jobmanager-fork</string> 
+     <null/> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object id="AtomicModuleAxis7" class="nl.wtcw.vle.wfd.impl.Axis.AtomicModuleAxis"> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object id="InputPortAxis12" class="nl.wtcw.vle.wfd.impl.Axis.InputPortAxis"> 
+        <void property="name"> 
+         <string>sw_parameters</string> 
+        </void> 
+        <void property="type"> 
+         <string>/SWParameters</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object id="InputPortAxis13" class="nl.wtcw.vle.wfd.impl.Axis.InputPortAxis"> 
+        <void property="name"> 
+         <string>sw_data</string> 
+        </void> 
+        <void property="type"> 
+         <string>/array</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object id="InputPortAxis14" class="nl.wtcw.vle.wfd.impl.Axis.InputPortAxis"> 
+        <void property="name"> 
+         <string>fdr_threshold</string> 
+        </void> 
+        <void property="type"> 
+         <string>/number</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object id="OutputPortAxis9" class="nl.wtcw.vle.wfd.impl.Axis.OutputPortAxis"> 
+        <void property="name"> 
+         <string>data_file_name</string> 
+        </void> 
+        <void property="type"> 
+         <string>/string</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object id="OutputPortAxis10" class="nl.wtcw.vle.wfd.impl.Axis.OutputPortAxis"> 
+        <void property="name"> 
+         <string>data_file</string> 
+        </void> 
+        <void property="type"> 
+         <string>/file</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>output_file</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>alltissues.out</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>format</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>2d</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>datatype</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>d</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>threshold</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>high</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>write2port</string> 
+        </void> 
+        <void property="type"> 
+         <string>bool</string> 
+        </void> 
+        <void property="value"> 
+         <string>true</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>log_level</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>Info</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>test_ports</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>all</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <string></string> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.CategoryAxis"> 
+        <string>Bioinformatics-SP1.5</string> 
+        <string>150006</string> 
+        <string>http://staff.science.uva.nl/~inda/SigWin-detector/html/modules.html</string> 
+        <string>SigWin</string> 
+       </object> 
+      </void> 
+     </object> 
+     <string>1037103625</string> 
+     <string>SigWinSelect</string> 
+     <string>fs2.das3.science.uva.nl</string> 
+     <null/> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object id="AtomicModuleAxis8" class="nl.wtcw.vle.wfd.impl.Axis.AtomicModuleAxis"> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object id="InputPortAxis15" class="nl.wtcw.vle.wfd.impl.Axis.InputPortAxis"> 
+        <void property="name"> 
+         <string>input_file</string> 
+        </void> 
+        <void property="type"> 
+         <string>/file</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object id="OutputPortAxis11" class="nl.wtcw.vle.wfd.impl.Axis.OutputPortAxis"> 
+        <void property="name"> 
+         <string>sequence1</string> 
+        </void> 
+        <void property="type"> 
+         <string>/array</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object id="OutputPortAxis12" class="nl.wtcw.vle.wfd.impl.Axis.OutputPortAxis"> 
+        <void property="name"> 
+         <string>sequence2</string> 
+        </void> 
+        <void property="type"> 
+         <string>/array</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>file_name</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>alltissues.txt</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>columns</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>1 2</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>datatypes</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>s d</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>file_descr</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string></string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>log_level</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>Info</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>test_ports</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>output</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <string></string> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.CategoryAxis"> 
+        <string>Bioinformatics-SP1.5</string> 
+        <string>150002</string> 
+        <string>http://staff.science.uva.nl/~inda/SigWin-detector/html/modules.html</string> 
+        <string>Arrays</string> 
+       </object> 
+      </void> 
+     </object> 
+     <string>164580750</string> 
+     <string>Read2Columns</string> 
+     <string>fs2.das3.science.uva.nl</string> 
+     <null/> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object id="AtomicModuleAxis9" class="nl.wtcw.vle.wfd.impl.Axis.AtomicModuleAxis"> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object id="InputPortAxis16" class="nl.wtcw.vle.wfd.impl.Axis.InputPortAxis"> 
+        <void property="name"> 
+         <string>sequence</string> 
+        </void> 
+        <void property="type"> 
+         <string>/array</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object id="OutputPortAxis13" class="nl.wtcw.vle.wfd.impl.Axis.OutputPortAxis"> 
+        <void property="name"> 
+         <string>boundaries</string> 
+        </void> 
+        <void property="type"> 
+         <string>/array/of_Bounds</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>description</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string></string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>log_level</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>Info</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>test_ports</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>all</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <string></string> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.CategoryAxis"> 
+        <string>Bioinformatics-SP1.5</string> 
+        <string>150002</string> 
+        <string>http://staff.science.uva.nl/~inda/SigWin-detector/html/modules.html</string> 
+        <string>Arrays</string> 
+       </object> 
+      </void> 
+     </object> 
+     <string>192765597</string> 
+     <string>SeqSplitter</string> 
+     <string>fs2.das3.science.uva.nl</string> 
+     <null/> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object id="AtomicModuleAxis10" class="nl.wtcw.vle.wfd.impl.Axis.AtomicModuleAxis"> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object id="InputPortAxis17" class="nl.wtcw.vle.wfd.impl.Axis.InputPortAxis"> 
+        <void property="name"> 
+         <string>boundaries</string> 
+        </void> 
+        <void property="type"> 
+         <string>/array/of_Bounds</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object id="InputPortAxis18" class="nl.wtcw.vle.wfd.impl.Axis.InputPortAxis"> 
+        <void property="name"> 
+         <string>sw_parameters</string> 
+        </void> 
+        <void property="type"> 
+         <string>/SWParameters</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object id="InputPortAxis19" class="nl.wtcw.vle.wfd.impl.Axis.InputPortAxis"> 
+        <void property="name"> 
+         <string>sw_data</string> 
+        </void> 
+        <void property="type"> 
+         <string>/array</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object id="OutputPortAxis14" class="nl.wtcw.vle.wfd.impl.Axis.OutputPortAxis"> 
+        <void property="name"> 
+         <string>ssw_parameters</string> 
+        </void> 
+        <void property="type"> 
+         <string>/SWParameters</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object id="OutputPortAxis15" class="nl.wtcw.vle.wfd.impl.Axis.OutputPortAxis"> 
+        <void property="name"> 
+         <string>ssw_data</string> 
+        </void> 
+        <void property="type"> 
+         <string>/array</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>datatype</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>d</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>log_level</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>Info</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.ParameterAxis"> 
+        <void property="name"> 
+         <string>test_ports</string> 
+        </void> 
+        <void property="type"> 
+         <string>string</string> 
+        </void> 
+        <void property="value"> 
+         <string>all</string> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+     <string></string> 
+     <object class="java.util.LinkedList"> 
+      <void method="add"> 
+       <object class="nl.wtcw.vle.wfd.impl.Axis.CategoryAxis"> 
+        <string>Bioinformatics-SP1.5</string> 
+        <string>150005</string> 
+        <string>http://staff.science.uva.nl/~inda/SigWin-detector/html/modules.html</string> 
+        <string>SlidingWindows</string> 
+       </object> 
+      </void> 
+     </object> 
+     <string>779996546</string> 
+     <string>SWSplitter</string> 
+     <string>fs2.das3.science.uva.nl</string> 
+     <null/> 
+    </object> 
+   </void> 
+  </object> 
+  <object class="java.util.LinkedList"> 
+   <void method="add"> 
+    <object id="ConnectionAxis0" class="nl.wtcw.vle.wfd.impl.Axis.ConnectionAxis"> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>159309945</string> 
+      </void> 
+      <void property="name"> 
+       <string>rank</string> 
+      </void> 
+     </object> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>47135559</string> 
+      </void> 
+      <void property="name"> 
+       <string>rank</string> 
+      </void> 
+     </object> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object id="ConnectionAxis1" class="nl.wtcw.vle.wfd.impl.Axis.ConnectionAxis"> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>159309945</string> 
+      </void> 
+      <void property="name"> 
+       <string>sorted_list</string> 
+      </void> 
+     </object> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>388780295</string> 
+      </void> 
+      <void property="name"> 
+       <string>sorted_list</string> 
+      </void> 
+     </object> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object id="ConnectionAxis2" class="nl.wtcw.vle.wfd.impl.Axis.ConnectionAxis"> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>159309945</string> 
+      </void> 
+      <void property="name"> 
+       <string>sorted_set</string> 
+      </void> 
+     </object> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>583869033</string> 
+      </void> 
+      <void property="name"> 
+       <string>x_axis</string> 
+      </void> 
+     </object> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object id="ConnectionAxis3" class="nl.wtcw.vle.wfd.impl.Axis.ConnectionAxis"> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>583869033</string> 
+      </void> 
+      <void property="name"> 
+       <string>frequencies</string> 
+      </void> 
+     </object> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>358035224</string> 
+      </void> 
+      <void property="name"> 
+       <string>frequencies</string> 
+      </void> 
+     </object> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object id="ConnectionAxis4" class="nl.wtcw.vle.wfd.impl.Axis.ConnectionAxis"> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>388780295</string> 
+      </void> 
+      <void property="name"> 
+       <string>probabilities</string> 
+      </void> 
+     </object> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>358035224</string> 
+      </void> 
+      <void property="name"> 
+       <string>probabilities</string> 
+      </void> 
+     </object> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object id="ConnectionAxis5" class="nl.wtcw.vle.wfd.impl.Axis.ConnectionAxis"> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>47135559</string> 
+      </void> 
+      <void property="name"> 
+       <string>sw_data</string> 
+      </void> 
+     </object> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>583869033</string> 
+      </void> 
+      <void property="name"> 
+       <string>samples</string> 
+      </void> 
+     </object> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object id="ConnectionAxis6" class="nl.wtcw.vle.wfd.impl.Axis.ConnectionAxis"> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>47135559</string> 
+      </void> 
+      <void property="name"> 
+       <string>sw_parameters</string> 
+      </void> 
+     </object> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>388780295</string> 
+      </void> 
+      <void property="name"> 
+       <string>sw_parameters</string> 
+      </void> 
+     </object> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object id="ConnectionAxis7" class="nl.wtcw.vle.wfd.impl.Axis.ConnectionAxis"> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>358035224</string> 
+      </void> 
+      <void property="name"> 
+       <string>fdr_threshold</string> 
+      </void> 
+     </object> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>1037103625</string> 
+      </void> 
+      <void property="name"> 
+       <string>fdr_threshold</string> 
+      </void> 
+     </object> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object id="ConnectionAxis8" class="nl.wtcw.vle.wfd.impl.Axis.ConnectionAxis"> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>1037103625</string> 
+      </void> 
+      <void property="name"> 
+       <string>data_file_name</string> 
+      </void> 
+     </object> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>1344663929</string> 
+      </void> 
+      <void property="name"> 
+       <string>data_file_names</string> 
+      </void> 
+     </object> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object id="ConnectionAxis9" class="nl.wtcw.vle.wfd.impl.Axis.ConnectionAxis"> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>1344663929</string> 
+      </void> 
+      <void property="name"> 
+       <string>grace_file</string> 
+      </void> 
+     </object> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>111849071</string> 
+      </void> 
+      <void property="name"> 
+       <string>xmgrace_file</string> 
+      </void> 
+     </object> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object id="ConnectionAxis10" class="nl.wtcw.vle.wfd.impl.Axis.ConnectionAxis"> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>159309945</string> 
+      </void> 
+      <void property="name"> 
+       <string>sorted_set</string> 
+      </void> 
+     </object> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>358035224</string> 
+      </void> 
+      <void property="name"> 
+       <string>x_axis</string> 
+      </void> 
+     </object> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object id="ConnectionAxis11" class="nl.wtcw.vle.wfd.impl.Axis.ConnectionAxis"> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>164580750</string> 
+      </void> 
+      <void property="name"> 
+       <string>sequence2</string> 
+      </void> 
+     </object> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>159309945</string> 
+      </void> 
+      <void property="name"> 
+       <string>sequence</string> 
+      </void> 
+     </object> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object id="ConnectionAxis12" class="nl.wtcw.vle.wfd.impl.Axis.ConnectionAxis"> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>164580750</string> 
+      </void> 
+      <void property="name"> 
+       <string>sequence1</string> 
+      </void> 
+     </object> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>192765597</string> 
+      </void> 
+      <void property="name"> 
+       <string>sequence</string> 
+      </void> 
+     </object> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object id="ConnectionAxis13" class="nl.wtcw.vle.wfd.impl.Axis.ConnectionAxis"> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>192765597</string> 
+      </void> 
+      <void property="name"> 
+       <string>boundaries</string> 
+      </void> 
+     </object> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>779996546</string> 
+      </void> 
+      <void property="name"> 
+       <string>boundaries</string> 
+      </void> 
+     </object> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object id="ConnectionAxis14" class="nl.wtcw.vle.wfd.impl.Axis.ConnectionAxis"> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>47135559</string> 
+      </void> 
+      <void property="name"> 
+       <string>sw_parameters</string> 
+      </void> 
+     </object> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>779996546</string> 
+      </void> 
+      <void property="name"> 
+       <string>sw_parameters</string> 
+      </void> 
+     </object> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object id="ConnectionAxis15" class="nl.wtcw.vle.wfd.impl.Axis.ConnectionAxis"> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>47135559</string> 
+      </void> 
+      <void property="name"> 
+       <string>sw_data</string> 
+      </void> 
+     </object> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>779996546</string> 
+      </void> 
+      <void property="name"> 
+       <string>sw_data</string> 
+      </void> 
+     </object> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object id="ConnectionAxis16" class="nl.wtcw.vle.wfd.impl.Axis.ConnectionAxis"> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>779996546</string> 
+      </void> 
+      <void property="name"> 
+       <string>ssw_data</string> 
+      </void> 
+     </object> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>1037103625</string> 
+      </void> 
+      <void property="name"> 
+       <string>sw_data</string> 
+      </void> 
+     </object> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object id="ConnectionAxis17" class="nl.wtcw.vle.wfd.impl.Axis.ConnectionAxis"> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>779996546</string> 
+      </void> 
+      <void property="name"> 
+       <string>ssw_parameters</string> 
+      </void> 
+     </object> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>1037103625</string> 
+      </void> 
+      <void property="name"> 
+       <string>sw_parameters</string> 
+      </void> 
+     </object> 
+    </object> 
+   </void> 
+   <void method="add"> 
+    <object id="ConnectionAxis18" class="nl.wtcw.vle.wfd.impl.Axis.ConnectionAxis"> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>779996546</string> 
+      </void> 
+      <void property="name"> 
+       <string>ssw_parameters</string> 
+      </void> 
+     </object> 
+     <object class="nl.wtcw.vle.wfd.impl.Axis.PortDescrAxis"> 
+      <void property="instanceID"> 
+       <string>1344663929</string> 
+      </void> 
+      <void property="name"> 
+       <string>sw_parameters</string> 
+      </void> 
+     </object> 
+    </object> 
+   </void> 
+  </object> 
+  <object class="org.jgraph.graph.GraphLayoutCache"> 
+   <void property="factory"> 
+    <object class="nl.wtcw.vle.gui.jg.MyCellViewFactory"/> 
+   </void> 
+   <void property="model"> 
+    <object class="nl.wtcw.vle.gui.jg.MyModel"> 
+     <object class="java.util.ArrayList"> 
+      <void method="add"> 
+       <object class="org.jgraph.graph.DefaultGraphCell"> 
+        <void method="add"> 
+         <object id="DefaultPort0" class="org.jgraph.graph.DefaultPort"> 
+          <void property="attributes"> 
+           <void method="put"> 
+            <string>offset</string> 
+            <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+             <void property="x"> 
+              <double>1000.0</double> 
+             </void> 
+             <void property="y"> 
+              <double>250.0</double> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void id="HashSet0" property="edges"> 
+           <void method="add"> 
+            <object id="DefaultEdge0" class="org.jgraph.graph.DefaultEdge"> 
+             <void property="attributes"> 
+              <void method="put"> 
+               <string>linewidth</string> 
+               <float>2.5</float> 
+              </void> 
+              <void method="put"> 
+               <string>labelAlongEdge</string> 
+               <boolean>true</boolean> 
+              </void> 
+              <void method="put"> 
+               <string>lineEnd</string> 
+               <int>1</int> 
+              </void> 
+              <void method="put"> 
+               <string>linecolor</string> 
+               <object id="Color0" class="java.awt.Color"> 
+                <int>192</int> 
+                <int>192</int> 
+                <int>192</int> 
+                <int>255</int> 
+               </object> 
+              </void> 
+              <void method="put"> 
+               <string>labelposition</string> 
+               <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                <void property="x"> 
+                 <double>500.0</double> 
+                </void> 
+               </object> 
+              </void> 
+              <void method="put"> 
+               <string>lineStyle</string> 
+               <int>13</int> 
+              </void> 
+              <void method="put"> 
+               <string>points</string> 
+               <object class="java.util.ArrayList"> 
+                <void method="add"> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="x"> 
+                   <double>332.0</double> 
+                  </void> 
+                  <void property="y"> 
+                   <double>156.5</double> 
+                  </void> 
+                 </object> 
+                </void> 
+                <void method="add"> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="x"> 
+                   <double>354.0</double> 
+                  </void> 
+                  <void property="y"> 
+                   <double>109.0</double> 
+                  </void> 
+                 </object> 
+                </void> 
+               </object> 
+              </void> 
+              <void method="put"> 
+               <string>editable</string> 
+               <boolean>false</boolean> 
+              </void> 
+             </void> 
+             <void property="source"> 
+              <object idref="DefaultPort0"/> 
+             </void> 
+             <void property="target"> 
+              <object id="DefaultPort1" class="org.jgraph.graph.DefaultPort"> 
+               <void property="attributes"> 
+                <void method="put"> 
+                 <string>offset</string> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="y"> 
+                   <double>500.0</double> 
+                  </void> 
+                 </object> 
+                </void> 
+               </void> 
+               <void id="HashSet1" property="edges"> 
+                <void method="add"> 
+                 <object idref="DefaultEdge0"/> 
+                </void> 
+               </void> 
+               <void property="edges"> 
+                <object idref="HashSet1"/> 
+               </void> 
+               <void property="userObject"> 
+                <object idref="InputPortAxis1"/> 
+               </void> 
+              </object> 
+             </void> 
+             <void property="userObject"> 
+              <object idref="ConnectionAxis0"/> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void property="edges"> 
+           <object idref="HashSet0"/> 
+          </void> 
+          <void property="userObject"> 
+           <object idref="OutputPortAxis0"/> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object id="DefaultPort2" class="org.jgraph.graph.DefaultPort"> 
+          <void property="attributes"> 
+           <void method="put"> 
+            <string>offset</string> 
+            <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+             <void property="x"> 
+              <double>1000.0</double> 
+             </void> 
+             <void property="y"> 
+              <double>500.0</double> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void id="HashSet2" property="edges"> 
+           <void method="add"> 
+            <object id="DefaultEdge1" class="org.jgraph.graph.DefaultEdge"> 
+             <void property="attributes"> 
+              <void method="put"> 
+               <string>linewidth</string> 
+               <float>2.5</float> 
+              </void> 
+              <void method="put"> 
+               <string>labelAlongEdge</string> 
+               <boolean>true</boolean> 
+              </void> 
+              <void method="put"> 
+               <string>lineEnd</string> 
+               <int>1</int> 
+              </void> 
+              <void method="put"> 
+               <string>linecolor</string> 
+               <object idref="Color0"/> 
+              </void> 
+              <void method="put"> 
+               <string>labelposition</string> 
+               <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                <void property="x"> 
+                 <double>500.0</double> 
+                </void> 
+               </object> 
+              </void> 
+              <void method="put"> 
+               <string>lineStyle</string> 
+               <int>13</int> 
+              </void> 
+              <void method="put"> 
+               <string>points</string> 
+               <object class="java.util.ArrayList"> 
+                <void method="add"> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="x"> 
+                   <double>332.0</double> 
+                  </void> 
+                  <void property="y"> 
+                   <double>178.0</double> 
+                  </void> 
+                 </object> 
+                </void> 
+                <void method="add"> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="x"> 
+                   <double>539.0</double> 
+                  </void> 
+                  <void property="y"> 
+                   <double>206.292</double> 
+                  </void> 
+                 </object> 
+                </void> 
+               </object> 
+              </void> 
+              <void method="put"> 
+               <string>editable</string> 
+               <boolean>false</boolean> 
+              </void> 
+             </void> 
+             <void property="source"> 
+              <object idref="DefaultPort2"/> 
+             </void> 
+             <void property="target"> 
+              <object id="DefaultPort3" class="org.jgraph.graph.DefaultPort"> 
+               <void property="attributes"> 
+                <void method="put"> 
+                 <string>offset</string> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="y"> 
+                   <double>666.0</double> 
+                  </void> 
+                 </object> 
+                </void> 
+               </void> 
+               <void id="HashSet3" property="edges"> 
+                <void method="add"> 
+                 <object idref="DefaultEdge1"/> 
+                </void> 
+               </void> 
+               <void property="edges"> 
+                <object idref="HashSet3"/> 
+               </void> 
+               <void property="userObject"> 
+                <object idref="InputPortAxis3"/> 
+               </void> 
+              </object> 
+             </void> 
+             <void property="userObject"> 
+              <object idref="ConnectionAxis1"/> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void property="edges"> 
+           <object idref="HashSet2"/> 
+          </void> 
+          <void property="userObject"> 
+           <object idref="OutputPortAxis1"/> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object id="DefaultPort4" class="org.jgraph.graph.DefaultPort"> 
+          <void property="attributes"> 
+           <void method="put"> 
+            <string>offset</string> 
+            <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+             <void property="x"> 
+              <double>1000.0</double> 
+             </void> 
+             <void property="y"> 
+              <double>750.0</double> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void id="HashSet4" property="edges"> 
+           <void method="add"> 
+            <object id="DefaultEdge2" class="org.jgraph.graph.DefaultEdge"> 
+             <void property="attributes"> 
+              <void method="put"> 
+               <string>linewidth</string> 
+               <float>2.5</float> 
+              </void> 
+              <void method="put"> 
+               <string>labelAlongEdge</string> 
+               <boolean>true</boolean> 
+              </void> 
+              <void method="put"> 
+               <string>lineEnd</string> 
+               <int>1</int> 
+              </void> 
+              <void method="put"> 
+               <string>linecolor</string> 
+               <object idref="Color0"/> 
+              </void> 
+              <void method="put"> 
+               <string>labelposition</string> 
+               <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                <void property="x"> 
+                 <double>500.0</double> 
+                </void> 
+               </object> 
+              </void> 
+              <void method="put"> 
+               <string>lineStyle</string> 
+               <int>13</int> 
+              </void> 
+              <void method="put"> 
+               <string>points</string> 
+               <object class="java.util.ArrayList"> 
+                <void method="add"> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="x"> 
+                   <double>332.0</double> 
+                  </void> 
+                  <void property="y"> 
+                   <double>199.5</double> 
+                  </void> 
+                 </object> 
+                </void> 
+                <void method="add"> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="x"> 
+                   <double>540.0</double> 
+                  </void> 
+                  <void property="y"> 
+                   <double>287.29200000000003</double> 
+                  </void> 
+                 </object> 
+                </void> 
+               </object> 
+              </void> 
+              <void method="put"> 
+               <string>editable</string> 
+               <boolean>false</boolean> 
+              </void> 
+             </void> 
+             <void property="source"> 
+              <object idref="DefaultPort4"/> 
+             </void> 
+             <void property="target"> 
+              <object id="DefaultPort5" class="org.jgraph.graph.DefaultPort"> 
+               <void property="attributes"> 
+                <void method="put"> 
+                 <string>offset</string> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="y"> 
+                   <double>666.0</double> 
+                  </void> 
+                 </object> 
+                </void> 
+               </void> 
+               <void id="HashSet5" property="edges"> 
+                <void method="add"> 
+                 <object idref="DefaultEdge2"/> 
+                </void> 
+               </void> 
+               <void property="edges"> 
+                <object idref="HashSet5"/> 
+               </void> 
+               <void property="userObject"> 
+                <object idref="InputPortAxis5"/> 
+               </void> 
+              </object> 
+             </void> 
+             <void property="userObject"> 
+              <object idref="ConnectionAxis2"/> 
+             </void> 
+            </object> 
+           </void> 
+           <void method="add"> 
+            <object id="DefaultEdge3" class="org.jgraph.graph.DefaultEdge"> 
+             <void property="attributes"> 
+              <void method="put"> 
+               <string>linewidth</string> 
+               <float>2.5</float> 
+              </void> 
+              <void method="put"> 
+               <string>labelAlongEdge</string> 
+               <boolean>true</boolean> 
+              </void> 
+              <void method="put"> 
+               <string>linecolor</string> 
+               <object idref="Color0"/> 
+              </void> 
+              <void method="put"> 
+               <string>lineEnd</string> 
+               <int>1</int> 
+              </void> 
+              <void method="put"> 
+               <string>labelposition</string> 
+               <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                <void property="x"> 
+                 <double>500.0</double> 
+                </void> 
+               </object> 
+              </void> 
+              <void method="put"> 
+               <string>lineStyle</string> 
+               <int>13</int> 
+              </void> 
+              <void method="put"> 
+               <string>points</string> 
+               <object class="java.util.ArrayList"> 
+                <void method="add"> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="x"> 
+                   <double>332.0</double> 
+                  </void> 
+                  <void property="y"> 
+                   <double>199.5</double> 
+                  </void> 
+                 </object> 
+                </void> 
+                <void method="add"> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="x"> 
+                   <double>676.0</double> 
+                  </void> 
+                  <void property="y"> 
+                   <double>349.0</double> 
+                  </void> 
+                 </object> 
+                </void> 
+                <void method="add"> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="x"> 
+                   <double>763.0</double> 
+                  </void> 
+                  <void property="y"> 
+                   <double>253.5</double> 
+                  </void> 
+                 </object> 
+                </void> 
+               </object> 
+              </void> 
+              <void method="put"> 
+               <string>editable</string> 
+               <boolean>false</boolean> 
+              </void> 
+             </void> 
+             <void property="source"> 
+              <object idref="DefaultPort4"/> 
+             </void> 
+             <void property="target"> 
+              <object id="DefaultPort6" class="org.jgraph.graph.DefaultPort"> 
+               <void property="attributes"> 
+                <void method="put"> 
+                 <string>offset</string> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="y"> 
+                   <double>750.0</double> 
+                  </void> 
+                 </object> 
+                </void> 
+               </void> 
+               <void id="HashSet6" property="edges"> 
+                <void method="add"> 
+                 <object idref="DefaultEdge3"/> 
+                </void> 
+               </void> 
+               <void property="edges"> 
+                <object idref="HashSet6"/> 
+               </void> 
+               <void property="userObject"> 
+                <object idref="InputPortAxis8"/> 
+               </void> 
+              </object> 
+             </void> 
+             <void property="userObject"> 
+              <object idref="ConnectionAxis10"/> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void property="edges"> 
+           <object idref="HashSet4"/> 
+          </void> 
+          <void property="userObject"> 
+           <object idref="OutputPortAxis2"/> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object id="DefaultPort7" class="org.jgraph.graph.DefaultPort"> 
+          <void property="attributes"> 
+           <void method="put"> 
+            <string>offset</string> 
+            <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+             <void property="y"> 
+              <double>500.0</double> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void id="HashSet7" property="edges"> 
+           <void method="add"> 
+            <object id="DefaultEdge4" class="org.jgraph.graph.DefaultEdge"> 
+             <void property="attributes"> 
+              <void method="put"> 
+               <string>lineEnd</string> 
+               <int>1</int> 
+              </void> 
+              <void method="put"> 
+               <string>linecolor</string> 
+               <object id="Color1" class="java.awt.Color"> 
+                <int>192</int> 
+                <int>192</int> 
+                <int>192</int> 
+                <int>255</int> 
+               </object> 
+              </void> 
+              <void method="put"> 
+               <string>labelAlongEdge</string> 
+               <boolean>true</boolean> 
+              </void> 
+              <void method="put"> 
+               <string>lineStyle</string> 
+               <int>13</int> 
+              </void> 
+              <void method="put"> 
+               <string>editable</string> 
+               <boolean>false</boolean> 
+              </void> 
+              <void method="put"> 
+               <string>linewidth</string> 
+               <float>2.5</float> 
+              </void> 
+             </void> 
+             <void property="source"> 
+              <object id="DefaultPort8" class="org.jgraph.graph.DefaultPort"> 
+               <void property="attributes"> 
+                <void method="put"> 
+                 <string>offset</string> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="x"> 
+                   <double>1000.0</double> 
+                  </void> 
+                  <void property="y"> 
+                   <double>666.0</double> 
+                  </void> 
+                 </object> 
+                </void> 
+               </void> 
+               <void id="HashSet8" property="edges"> 
+                <void method="add"> 
+                 <object idref="DefaultEdge4"/> 
+                </void> 
+               </void> 
+               <void property="edges"> 
+                <object idref="HashSet8"/> 
+               </void> 
+               <void property="userObject"> 
+                <object idref="OutputPortAxis12"/> 
+               </void> 
+              </object> 
+             </void> 
+             <void property="target"> 
+              <object idref="DefaultPort7"/> 
+             </void> 
+             <void property="userObject"> 
+              <object idref="ConnectionAxis11"/> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void property="edges"> 
+           <object idref="HashSet7"/> 
+          </void> 
+          <void property="userObject"> 
+           <object idref="InputPortAxis0"/> 
+          </void> 
+         </object> 
+        </void> 
+        <void property="attributes"> 
+         <void method="put"> 
+          <string>bordercolor</string> 
+          <object id="Color2" class="java.awt.Color"> 
+           <int>0</int> 
+           <int>0</int> 
+           <int>0</int> 
+           <int>255</int> 
+          </object> 
+         </void> 
+         <void method="put"> 
+          <string>backgroundColor</string> 
+          <object id="Color3" class="java.awt.Color"> 
+           <int>255</int> 
+           <int>255</int> 
+           <int>255</int> 
+           <int>255</int> 
+          </object> 
+         </void> 
+         <void method="put"> 
+          <string>bounds</string> 
+          <object class="org.jgraph.graph.AttributeMap$SerializableRectangle2D"> 
+           <void property="height"> 
+            <double>87.0</double> 
+           </void> 
+           <void property="width"> 
+            <double>120.0</double> 
+           </void> 
+           <void property="x"> 
+            <double>213.0</double> 
+           </void> 
+           <void property="y"> 
+            <double>135.0</double> 
+           </void> 
+          </object> 
+         </void> 
+         <void method="put"> 
+          <string>gradientColor</string> 
+          <object id="Color4" class="java.awt.Color"> 
+           <int>0</int> 
+           <int>255</int> 
+           <int>0</int> 
+           <int>255</int> 
+          </object> 
+         </void> 
+         <void method="put"> 
+          <string>opaque</string> 
+          <boolean>true</boolean> 
+         </void> 
+        </void> 
+        <void property="userObject"> 
+         <object idref="AtomicModuleAxis0"/> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="org.jgraph.graph.DefaultGraphCell"> 
+        <void method="add"> 
+         <object id="DefaultPort9" class="org.jgraph.graph.DefaultPort"> 
+          <void property="attributes"> 
+           <void method="put"> 
+            <string>offset</string> 
+            <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+             <void property="x"> 
+              <double>1000.0</double> 
+             </void> 
+             <void property="y"> 
+              <double>333.0</double> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void id="HashSet9" property="edges"> 
+           <void method="add"> 
+            <object id="DefaultEdge5" class="org.jgraph.graph.DefaultEdge"> 
+             <void property="attributes"> 
+              <void method="put"> 
+               <string>lineEnd</string> 
+               <int>1</int> 
+              </void> 
+              <void method="put"> 
+               <string>linecolor</string> 
+               <object idref="Color1"/> 
+              </void> 
+              <void method="put"> 
+               <string>labelAlongEdge</string> 
+               <boolean>true</boolean> 
+              </void> 
+              <void method="put"> 
+               <string>lineStyle</string> 
+               <int>13</int> 
+              </void> 
+              <void method="put"> 
+               <string>editable</string> 
+               <boolean>false</boolean> 
+              </void> 
+              <void method="put"> 
+               <string>linewidth</string> 
+               <float>2.5</float> 
+              </void> 
+             </void> 
+             <void property="source"> 
+              <object idref="DefaultPort9"/> 
+             </void> 
+             <void property="target"> 
+              <object id="DefaultPort10" class="org.jgraph.graph.DefaultPort"> 
+               <void property="attributes"> 
+                <void method="put"> 
+                 <string>offset</string> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="y"> 
+                   <double>500.0</double> 
+                  </void> 
+                 </object> 
+                </void> 
+               </void> 
+               <void id="HashSet10" property="edges"> 
+                <void method="add"> 
+                 <object idref="DefaultEdge5"/> 
+                </void> 
+               </void> 
+               <void property="edges"> 
+                <object idref="HashSet10"/> 
+               </void> 
+               <void property="userObject"> 
+                <object idref="InputPortAxis18"/> 
+               </void> 
+              </object> 
+             </void> 
+             <void property="userObject"> 
+              <object idref="ConnectionAxis14"/> 
+             </void> 
+            </object> 
+           </void> 
+           <void method="add"> 
+            <object id="DefaultEdge6" class="org.jgraph.graph.DefaultEdge"> 
+             <void property="attributes"> 
+              <void method="put"> 
+               <string>linewidth</string> 
+               <float>2.5</float> 
+              </void> 
+              <void method="put"> 
+               <string>labelAlongEdge</string> 
+               <boolean>true</boolean> 
+              </void> 
+              <void method="put"> 
+               <string>lineEnd</string> 
+               <int>1</int> 
+              </void> 
+              <void method="put"> 
+               <string>linecolor</string> 
+               <object idref="Color0"/> 
+              </void> 
+              <void method="put"> 
+               <string>labelposition</string> 
+               <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                <void property="x"> 
+                 <double>500.0</double> 
+                </void> 
+               </object> 
+              </void> 
+              <void method="put"> 
+               <string>lineStyle</string> 
+               <int>13</int> 
+              </void> 
+              <void method="put"> 
+               <string>points</string> 
+               <object class="java.util.ArrayList"> 
+                <void method="add"> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="x"> 
+                   <double>497.0</double> 
+                  </void> 
+                  <void property="y"> 
+                   <double>98.646</double> 
+                  </void> 
+                 </object> 
+                </void> 
+                <void method="add"> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="x"> 
+                   <double>539.0</double> 
+                  </void> 
+                  <void property="y"> 
+                   <double>185.64600000000002</double> 
+                  </void> 
+                 </object> 
+                </void> 
+               </object> 
+              </void> 
+              <void method="put"> 
+               <string>editable</string> 
+               <boolean>false</boolean> 
+              </void> 
+             </void> 
+             <void property="source"> 
+              <object idref="DefaultPort9"/> 
+             </void> 
+             <void property="target"> 
+              <object id="DefaultPort11" class="org.jgraph.graph.DefaultPort"> 
+               <void property="attributes"> 
+                <void method="put"> 
+                 <string>offset</string> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="y"> 
+                   <double>333.0</double> 
+                  </void> 
+                 </object> 
+                </void> 
+               </void> 
+               <void id="HashSet11" property="edges"> 
+                <void method="add"> 
+                 <object idref="DefaultEdge6"/> 
+                </void> 
+               </void> 
+               <void property="edges"> 
+                <object idref="HashSet11"/> 
+               </void> 
+               <void property="userObject"> 
+                <object idref="InputPortAxis2"/> 
+               </void> 
+              </object> 
+             </void> 
+             <void property="userObject"> 
+              <object idref="ConnectionAxis6"/> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void property="edges"> 
+           <object idref="HashSet9"/> 
+          </void> 
+          <void property="userObject"> 
+           <object idref="OutputPortAxis3"/> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object id="DefaultPort12" class="org.jgraph.graph.DefaultPort"> 
+          <void property="attributes"> 
+           <void method="put"> 
+            <string>offset</string> 
+            <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+             <void property="x"> 
+              <double>1000.0</double> 
+             </void> 
+             <void property="y"> 
+              <double>666.0</double> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void id="HashSet12" property="edges"> 
+           <void method="add"> 
+            <object id="DefaultEdge7" class="org.jgraph.graph.DefaultEdge"> 
+             <void property="attributes"> 
+              <void method="put"> 
+               <string>linewidth</string> 
+               <float>2.5</float> 
+              </void> 
+              <void method="put"> 
+               <string>labelAlongEdge</string> 
+               <boolean>true</boolean> 
+              </void> 
+              <void method="put"> 
+               <string>lineEnd</string> 
+               <int>1</int> 
+              </void> 
+              <void method="put"> 
+               <string>linecolor</string> 
+               <object idref="Color0"/> 
+              </void> 
+              <void method="put"> 
+               <string>labelposition</string> 
+               <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                <void property="x"> 
+                 <double>500.0</double> 
+                </void> 
+               </object> 
+              </void> 
+              <void method="put"> 
+               <string>lineStyle</string> 
+               <int>13</int> 
+              </void> 
+              <void method="put"> 
+               <string>points</string> 
+               <object class="java.util.ArrayList"> 
+                <void method="add"> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="x"> 
+                   <double>497.0</double> 
+                  </void> 
+                  <void property="y"> 
+                   <double>119.292</double> 
+                  </void> 
+                 </object> 
+                </void> 
+                <void method="add"> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="x"> 
+                   <double>540.0</double> 
+                  </void> 
+                  <void property="y"> 
+                   <double>266.646</double> 
+                  </void> 
+                 </object> 
+                </void> 
+               </object> 
+              </void> 
+              <void method="put"> 
+               <string>editable</string> 
+               <boolean>false</boolean> 
+              </void> 
+             </void> 
+             <void property="source"> 
+              <object idref="DefaultPort12"/> 
+             </void> 
+             <void property="target"> 
+              <object id="DefaultPort13" class="org.jgraph.graph.DefaultPort"> 
+               <void property="attributes"> 
+                <void method="put"> 
+                 <string>offset</string> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="y"> 
+                   <double>333.0</double> 
+                  </void> 
+                 </object> 
+                </void> 
+               </void> 
+               <void id="HashSet13" property="edges"> 
+                <void method="add"> 
+                 <object idref="DefaultEdge7"/> 
+                </void> 
+               </void> 
+               <void property="edges"> 
+                <object idref="HashSet13"/> 
+               </void> 
+               <void property="userObject"> 
+                <object idref="InputPortAxis4"/> 
+               </void> 
+              </object> 
+             </void> 
+             <void property="userObject"> 
+              <object idref="ConnectionAxis5"/> 
+             </void> 
+            </object> 
+           </void> 
+           <void method="add"> 
+            <object id="DefaultEdge8" class="org.jgraph.graph.DefaultEdge"> 
+             <void property="attributes"> 
+              <void method="put"> 
+               <string>lineEnd</string> 
+               <int>1</int> 
+              </void> 
+              <void method="put"> 
+               <string>linecolor</string> 
+               <object idref="Color1"/> 
+              </void> 
+              <void method="put"> 
+               <string>labelAlongEdge</string> 
+               <boolean>true</boolean> 
+              </void> 
+              <void method="put"> 
+               <string>lineStyle</string> 
+               <int>13</int> 
+              </void> 
+              <void method="put"> 
+               <string>editable</string> 
+               <boolean>false</boolean> 
+              </void> 
+              <void method="put"> 
+               <string>linewidth</string> 
+               <float>2.5</float> 
+              </void> 
+             </void> 
+             <void property="source"> 
+              <object idref="DefaultPort12"/> 
+             </void> 
+             <void property="target"> 
+              <object id="DefaultPort14" class="org.jgraph.graph.DefaultPort"> 
+               <void property="attributes"> 
+                <void method="put"> 
+                 <string>offset</string> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="y"> 
+                   <double>750.0</double> 
+                  </void> 
+                 </object> 
+                </void> 
+               </void> 
+               <void id="HashSet14" property="edges"> 
+                <void method="add"> 
+                 <object idref="DefaultEdge8"/> 
+                </void> 
+               </void> 
+               <void property="edges"> 
+                <object idref="HashSet14"/> 
+               </void> 
+               <void property="userObject"> 
+                <object idref="InputPortAxis19"/> 
+               </void> 
+              </object> 
+             </void> 
+             <void property="userObject"> 
+              <object idref="ConnectionAxis15"/> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void property="edges"> 
+           <object idref="HashSet12"/> 
+          </void> 
+          <void property="userObject"> 
+           <object idref="OutputPortAxis4"/> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object idref="DefaultPort1"/> 
+        </void> 
+        <void property="attributes"> 
+         <void method="put"> 
+          <string>bordercolor</string> 
+          <object idref="Color2"/> 
+         </void> 
+         <void method="put"> 
+          <string>backgroundColor</string> 
+          <object idref="Color3"/> 
+         </void> 
+         <void method="put"> 
+          <string>bounds</string> 
+          <object class="org.jgraph.graph.AttributeMap$SerializableRectangle2D"> 
+           <void property="height"> 
+            <double>63.0</double> 
+           </void> 
+           <void property="width"> 
+            <double>144.0</double> 
+           </void> 
+           <void property="x"> 
+            <double>354.0</double> 
+           </void> 
+           <void property="y"> 
+            <double>78.0</double> 
+           </void> 
+          </object> 
+         </void> 
+         <void method="put"> 
+          <string>gradientColor</string> 
+          <object idref="Color4"/> 
+         </void> 
+         <void method="put"> 
+          <string>opaque</string> 
+          <boolean>true</boolean> 
+         </void> 
+        </void> 
+        <void property="userObject"> 
+         <object idref="AtomicModuleAxis1"/> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="org.jgraph.graph.DefaultGraphCell"> 
+        <void method="add"> 
+         <object id="DefaultPort15" class="org.jgraph.graph.DefaultPort"> 
+          <void property="attributes"> 
+           <void method="put"> 
+            <string>offset</string> 
+            <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+             <void property="x"> 
+              <double>1000.0</double> 
+             </void> 
+             <void property="y"> 
+              <double>500.0</double> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void id="HashSet15" property="edges"> 
+           <void method="add"> 
+            <object id="DefaultEdge9" class="org.jgraph.graph.DefaultEdge"> 
+             <void property="attributes"> 
+              <void method="put"> 
+               <string>linewidth</string> 
+               <float>2.5</float> 
+              </void> 
+              <void method="put"> 
+               <string>labelAlongEdge</string> 
+               <boolean>true</boolean> 
+              </void> 
+              <void method="put"> 
+               <string>lineEnd</string> 
+               <int>1</int> 
+              </void> 
+              <void method="put"> 
+               <string>linecolor</string> 
+               <object idref="Color0"/> 
+              </void> 
+              <void method="put"> 
+               <string>labelposition</string> 
+               <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                <void property="x"> 
+                 <double>500.0</double> 
+                </void> 
+               </object> 
+              </void> 
+              <void method="put"> 
+               <string>lineStyle</string> 
+               <int>13</int> 
+              </void> 
+              <void method="put"> 
+               <string>points</string> 
+               <object class="java.util.ArrayList"> 
+                <void method="add"> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="x"> 
+                   <double>718.0</double> 
+                  </void> 
+                  <void property="y"> 
+                   <double>196.0</double> 
+                  </void> 
+                 </object> 
+                </void> 
+                <void method="add"> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="x"> 
+                   <double>763.0</double> 
+                  </void> 
+                  <void property="y"> 
+                   <double>210.5</double> 
+                  </void> 
+                 </object> 
+                </void> 
+               </object> 
+              </void> 
+              <void method="put"> 
+               <string>editable</string> 
+               <boolean>false</boolean> 
+              </void> 
+             </void> 
+             <void property="source"> 
+              <object idref="DefaultPort15"/> 
+             </void> 
+             <void property="target"> 
+              <object id="DefaultPort16" class="org.jgraph.graph.DefaultPort"> 
+               <void property="attributes"> 
+                <void method="put"> 
+                 <string>offset</string> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="y"> 
+                   <double>250.0</double> 
+                  </void> 
+                 </object> 
+                </void> 
+               </void> 
+               <void id="HashSet16" property="edges"> 
+                <void method="add"> 
+                 <object idref="DefaultEdge9"/> 
+                </void> 
+               </void> 
+               <void property="edges"> 
+                <object idref="HashSet16"/> 
+               </void> 
+               <void property="userObject"> 
+                <object idref="InputPortAxis6"/> 
+               </void> 
+              </object> 
+             </void> 
+             <void property="userObject"> 
+              <object idref="ConnectionAxis4"/> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void property="edges"> 
+           <object idref="HashSet15"/> 
+          </void> 
+          <void property="userObject"> 
+           <object idref="OutputPortAxis5"/> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object idref="DefaultPort11"/> 
+        </void> 
+        <void method="add"> 
+         <object idref="DefaultPort3"/> 
+        </void> 
+        <void property="attributes"> 
+         <void method="put"> 
+          <string>bordercolor</string> 
+          <object idref="Color2"/> 
+         </void> 
+         <void method="put"> 
+          <string>backgroundColor</string> 
+          <object idref="Color3"/> 
+         </void> 
+         <void method="put"> 
+          <string>bounds</string> 
+          <object class="org.jgraph.graph.AttributeMap$SerializableRectangle2D"> 
+           <void property="height"> 
+            <double>63.0</double> 
+           </void> 
+           <void property="width"> 
+            <double>180.0</double> 
+           </void> 
+           <void property="x"> 
+            <double>539.0</double> 
+           </void> 
+           <void property="y"> 
+            <double>165.0</double> 
+           </void> 
+          </object> 
+         </void> 
+         <void method="put"> 
+          <string>gradientColor</string> 
+          <object idref="Color4"/> 
+         </void> 
+         <void method="put"> 
+          <string>opaque</string> 
+          <boolean>true</boolean> 
+         </void> 
+        </void> 
+        <void property="userObject"> 
+         <object idref="AtomicModuleAxis2"/> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="org.jgraph.graph.DefaultGraphCell"> 
+        <void method="add"> 
+         <object id="DefaultPort17" class="org.jgraph.graph.DefaultPort"> 
+          <void property="attributes"> 
+           <void method="put"> 
+            <string>offset</string> 
+            <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+             <void property="x"> 
+              <double>1000.0</double> 
+             </void> 
+             <void property="y"> 
+              <double>500.0</double> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void id="HashSet17" property="edges"> 
+           <void method="add"> 
+            <object id="DefaultEdge10" class="org.jgraph.graph.DefaultEdge"> 
+             <void property="attributes"> 
+              <void method="put"> 
+               <string>linewidth</string> 
+               <float>2.5</float> 
+              </void> 
+              <void method="put"> 
+               <string>labelAlongEdge</string> 
+               <boolean>true</boolean> 
+              </void> 
+              <void method="put"> 
+               <string>lineEnd</string> 
+               <int>1</int> 
+              </void> 
+              <void method="put"> 
+               <string>linecolor</string> 
+               <object idref="Color0"/> 
+              </void> 
+              <void method="put"> 
+               <string>labelposition</string> 
+               <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                <void property="x"> 
+                 <double>500.0</double> 
+                </void> 
+               </object> 
+              </void> 
+              <void method="put"> 
+               <string>lineStyle</string> 
+               <int>13</int> 
+              </void> 
+              <void method="put"> 
+               <string>points</string> 
+               <object class="java.util.ArrayList"> 
+                <void method="add"> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="x"> 
+                   <double>708.0</double> 
+                  </void> 
+                  <void property="y"> 
+                   <double>277.0</double> 
+                  </void> 
+                 </object> 
+                </void> 
+                <void method="add"> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="x"> 
+                   <double>763.0</double> 
+                  </void> 
+                  <void property="y"> 
+                   <double>232.0</double> 
+                  </void> 
+                 </object> 
+                </void> 
+               </object> 
+              </void> 
+              <void method="put"> 
+               <string>editable</string> 
+               <boolean>false</boolean> 
+              </void> 
+             </void> 
+             <void property="source"> 
+              <object idref="DefaultPort17"/> 
+             </void> 
+             <void property="target"> 
+              <object id="DefaultPort18" class="org.jgraph.graph.DefaultPort"> 
+               <void property="attributes"> 
+                <void method="put"> 
+                 <string>offset</string> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="y"> 
+                   <double>500.0</double> 
+                  </void> 
+                 </object> 
+                </void> 
+               </void> 
+               <void id="HashSet18" property="edges"> 
+                <void method="add"> 
+                 <object idref="DefaultEdge10"/> 
+                </void> 
+               </void> 
+               <void property="edges"> 
+                <object idref="HashSet18"/> 
+               </void> 
+               <void property="userObject"> 
+                <object idref="InputPortAxis7"/> 
+               </void> 
+              </object> 
+             </void> 
+             <void property="userObject"> 
+              <object idref="ConnectionAxis3"/> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void property="edges"> 
+           <object idref="HashSet17"/> 
+          </void> 
+          <void property="userObject"> 
+           <object idref="OutputPortAxis6"/> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object idref="DefaultPort13"/> 
+        </void> 
+        <void method="add"> 
+         <object idref="DefaultPort5"/> 
+        </void> 
+        <void property="attributes"> 
+         <void method="put"> 
+          <string>bordercolor</string> 
+          <object idref="Color2"/> 
+         </void> 
+         <void method="put"> 
+          <string>backgroundColor</string> 
+          <object idref="Color3"/> 
+         </void> 
+         <void method="put"> 
+          <string>bounds</string> 
+          <object class="org.jgraph.graph.AttributeMap$SerializableRectangle2D"> 
+           <void property="height"> 
+            <double>63.0</double> 
+           </void> 
+           <void property="width"> 
+            <double>169.0</double> 
+           </void> 
+           <void property="x"> 
+            <double>540.0</double> 
+           </void> 
+           <void property="y"> 
+            <double>246.0</double> 
+           </void> 
+          </object> 
+         </void> 
+         <void method="put"> 
+          <string>gradientColor</string> 
+          <object idref="Color4"/> 
+         </void> 
+         <void method="put"> 
+          <string>opaque</string> 
+          <boolean>true</boolean> 
+         </void> 
+        </void> 
+        <void property="userObject"> 
+         <object idref="AtomicModuleAxis3"/> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="org.jgraph.graph.DefaultGraphCell"> 
+        <void method="add"> 
+         <object id="DefaultPort19" class="org.jgraph.graph.DefaultPort"> 
+          <void property="attributes"> 
+           <void method="put"> 
+            <string>offset</string> 
+            <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+             <void property="x"> 
+              <double>1000.0</double> 
+             </void> 
+             <void property="y"> 
+              <double>500.0</double> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void id="HashSet19" property="edges"> 
+           <void method="add"> 
+            <object id="DefaultEdge11" class="org.jgraph.graph.DefaultEdge"> 
+             <void property="attributes"> 
+              <void method="put"> 
+               <string>linewidth</string> 
+               <float>2.5</float> 
+              </void> 
+              <void method="put"> 
+               <string>labelAlongEdge</string> 
+               <boolean>true</boolean> 
+              </void> 
+              <void method="put"> 
+               <string>lineEnd</string> 
+               <int>1</int> 
+              </void> 
+              <void method="put"> 
+               <string>linecolor</string> 
+               <object idref="Color0"/> 
+              </void> 
+              <void method="put"> 
+               <string>labelposition</string> 
+               <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                <void property="x"> 
+                 <double>500.0</double> 
+                </void> 
+               </object> 
+              </void> 
+              <void method="put"> 
+               <string>lineStyle</string> 
+               <int>13</int> 
+              </void> 
+              <void method="put"> 
+               <string>points</string> 
+               <object class="java.util.ArrayList"> 
+                <void method="add"> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="x"> 
+                   <double>939.0</double> 
+                  </void> 
+                  <void property="y"> 
+                   <double>232.0</double> 
+                  </void> 
+                 </object> 
+                </void> 
+                <void method="add"> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="x"> 
+                   <double>967.0</double> 
+                  </void> 
+                  <void property="y"> 
+                   <double>192.5</double> 
+                  </void> 
+                 </object> 
+                </void> 
+               </object> 
+              </void> 
+              <void method="put"> 
+               <string>editable</string> 
+               <boolean>false</boolean> 
+              </void> 
+             </void> 
+             <void property="source"> 
+              <object idref="DefaultPort19"/> 
+             </void> 
+             <void property="target"> 
+              <object id="DefaultPort20" class="org.jgraph.graph.DefaultPort"> 
+               <void property="attributes"> 
+                <void method="put"> 
+                 <string>offset</string> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="y"> 
+                   <double>750.0</double> 
+                  </void> 
+                 </object> 
+                </void> 
+               </void> 
+               <void id="HashSet20" property="edges"> 
+                <void method="add"> 
+                 <object idref="DefaultEdge11"/> 
+                </void> 
+               </void> 
+               <void property="edges"> 
+                <object idref="HashSet20"/> 
+               </void> 
+               <void property="userObject"> 
+                <object idref="InputPortAxis14"/> 
+               </void> 
+              </object> 
+             </void> 
+             <void property="userObject"> 
+              <object idref="ConnectionAxis7"/> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void property="edges"> 
+           <object idref="HashSet19"/> 
+          </void> 
+          <void property="userObject"> 
+           <object idref="OutputPortAxis7"/> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object idref="DefaultPort16"/> 
+        </void> 
+        <void method="add"> 
+         <object idref="DefaultPort18"/> 
+        </void> 
+        <void method="add"> 
+         <object idref="DefaultPort6"/> 
+        </void> 
+        <void property="attributes"> 
+         <void method="put"> 
+          <string>bordercolor</string> 
+          <object idref="Color2"/> 
+         </void> 
+         <void method="put"> 
+          <string>backgroundColor</string> 
+          <object idref="Color3"/> 
+         </void> 
+         <void method="put"> 
+          <string>bounds</string> 
+          <object class="org.jgraph.graph.AttributeMap$SerializableRectangle2D"> 
+           <void property="height"> 
+            <double>87.0</double> 
+           </void> 
+           <void property="width"> 
+            <double>177.0</double> 
+           </void> 
+           <void property="x"> 
+            <double>763.0</double> 
+           </void> 
+           <void property="y"> 
+            <double>189.0</double> 
+           </void> 
+          </object> 
+         </void> 
+         <void method="put"> 
+          <string>gradientColor</string> 
+          <object idref="Color4"/> 
+         </void> 
+         <void method="put"> 
+          <string>opaque</string> 
+          <boolean>true</boolean> 
+         </void> 
+        </void> 
+        <void property="userObject"> 
+         <object idref="AtomicModuleAxis4"/> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="org.jgraph.graph.DefaultGraphCell"> 
+        <void method="add"> 
+         <object id="DefaultPort21" class="org.jgraph.graph.DefaultPort"> 
+          <void property="attributes"> 
+           <void method="put"> 
+            <string>offset</string> 
+            <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+             <void property="x"> 
+              <double>1000.0</double> 
+             </void> 
+             <void property="y"> 
+              <double>500.0</double> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void id="HashSet21" property="edges"> 
+           <void method="add"> 
+            <object id="DefaultEdge12" class="org.jgraph.graph.DefaultEdge"> 
+             <void property="attributes"> 
+              <void method="put"> 
+               <string>linewidth</string> 
+               <float>2.5</float> 
+              </void> 
+              <void method="put"> 
+               <string>labelAlongEdge</string> 
+               <boolean>true</boolean> 
+              </void> 
+              <void method="put"> 
+               <string>lineEnd</string> 
+               <int>1</int> 
+              </void> 
+              <void method="put"> 
+               <string>linecolor</string> 
+               <object idref="Color0"/> 
+              </void> 
+              <void method="put"> 
+               <string>labelposition</string> 
+               <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                <void property="x"> 
+                 <double>500.0</double> 
+                </void> 
+               </object> 
+              </void> 
+              <void method="put"> 
+               <string>lineStyle</string> 
+               <int>13</int> 
+              </void> 
+              <void method="put"> 
+               <string>points</string> 
+               <object class="java.util.ArrayList"> 
+                <void method="add"> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="x"> 
+                   <double>1378.0</double> 
+                  </void> 
+                  <void property="y"> 
+                   <double>122.0</double> 
+                  </void> 
+                 </object> 
+                </void> 
+                <void method="add"> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="x"> 
+                   <double>1419.0</double> 
+                  </void> 
+                  <void property="y"> 
+                   <double>117.0</double> 
+                  </void> 
+                 </object> 
+                </void> 
+               </object> 
+              </void> 
+              <void method="put"> 
+               <string>editable</string> 
+               <boolean>false</boolean> 
+              </void> 
+             </void> 
+             <void property="source"> 
+              <object idref="DefaultPort21"/> 
+             </void> 
+             <void property="target"> 
+              <object id="DefaultPort22" class="org.jgraph.graph.DefaultPort"> 
+               <void property="attributes"> 
+                <void method="put"> 
+                 <string>offset</string> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="y"> 
+                   <double>500.0</double> 
+                  </void> 
+                 </object> 
+                </void> 
+               </void> 
+               <void id="HashSet22" property="edges"> 
+                <void method="add"> 
+                 <object idref="DefaultEdge12"/> 
+                </void> 
+               </void> 
+               <void property="edges"> 
+                <object idref="HashSet22"/> 
+               </void> 
+               <void property="userObject"> 
+                <object idref="InputPortAxis11"/> 
+               </void> 
+              </object> 
+             </void> 
+             <void property="userObject"> 
+              <object idref="ConnectionAxis9"/> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void property="edges"> 
+           <object idref="HashSet21"/> 
+          </void> 
+          <void property="userObject"> 
+           <object idref="OutputPortAxis8"/> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object id="DefaultPort23" class="org.jgraph.graph.DefaultPort"> 
+          <void property="attributes"> 
+           <void method="put"> 
+            <string>offset</string> 
+            <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+             <void property="y"> 
+              <double>333.0</double> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void id="HashSet23" property="edges"> 
+           <void method="add"> 
+            <object id="DefaultEdge13" class="org.jgraph.graph.DefaultEdge"> 
+             <void property="attributes"> 
+              <void method="put"> 
+               <string>lineEnd</string> 
+               <int>1</int> 
+              </void> 
+              <void method="put"> 
+               <string>linecolor</string> 
+               <object idref="Color1"/> 
+              </void> 
+              <void method="put"> 
+               <string>labelAlongEdge</string> 
+               <boolean>true</boolean> 
+              </void> 
+              <void method="put"> 
+               <string>lineStyle</string> 
+               <int>13</int> 
+              </void> 
+              <void method="put"> 
+               <string>editable</string> 
+               <boolean>false</boolean> 
+              </void> 
+              <void method="put"> 
+               <string>linewidth</string> 
+               <float>2.5</float> 
+              </void> 
+             </void> 
+             <void property="source"> 
+              <object id="DefaultPort24" class="org.jgraph.graph.DefaultPort"> 
+               <void property="attributes"> 
+                <void method="put"> 
+                 <string>offset</string> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="x"> 
+                   <double>1000.0</double> 
+                  </void> 
+                  <void property="y"> 
+                   <double>333.0</double> 
+                  </void> 
+                 </object> 
+                </void> 
+               </void> 
+               <void id="HashSet24" property="edges"> 
+                <void method="add"> 
+                 <object id="DefaultEdge14" class="org.jgraph.graph.DefaultEdge"> 
+                  <void property="attributes"> 
+                   <void method="put"> 
+                    <string>lineEnd</string> 
+                    <int>1</int> 
+                   </void> 
+                   <void method="put"> 
+                    <string>linecolor</string> 
+                    <object idref="Color1"/> 
+                   </void> 
+                   <void method="put"> 
+                    <string>labelAlongEdge</string> 
+                    <boolean>true</boolean> 
+                   </void> 
+                   <void method="put"> 
+                    <string>lineStyle</string> 
+                    <int>13</int> 
+                   </void> 
+                   <void method="put"> 
+                    <string>editable</string> 
+                    <boolean>false</boolean> 
+                   </void> 
+                   <void method="put"> 
+                    <string>linewidth</string> 
+                    <float>2.5</float> 
+                   </void> 
+                  </void> 
+                  <void property="source"> 
+                   <object idref="DefaultPort24"/> 
+                  </void> 
+                  <void property="target"> 
+                   <object id="DefaultPort25" class="org.jgraph.graph.DefaultPort"> 
+                    <void property="attributes"> 
+                     <void method="put"> 
+                      <string>offset</string> 
+                      <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                       <void property="y"> 
+                        <double>250.0</double> 
+                       </void> 
+                      </object> 
+                     </void> 
+                    </void> 
+                    <void id="HashSet25" property="edges"> 
+                     <void method="add"> 
+                      <object idref="DefaultEdge14"/> 
+                     </void> 
+                    </void> 
+                    <void property="edges"> 
+                     <object idref="HashSet25"/> 
+                    </void> 
+                    <void property="userObject"> 
+                     <object idref="InputPortAxis12"/> 
+                    </void> 
+                   </object> 
+                  </void> 
+                  <void property="userObject"> 
+                   <object idref="ConnectionAxis17"/> 
+                  </void> 
+                 </object> 
+                </void> 
+                <void method="add"> 
+                 <object idref="DefaultEdge13"/> 
+                </void> 
+               </void> 
+               <void property="edges"> 
+                <object idref="HashSet24"/> 
+               </void> 
+               <void property="userObject"> 
+                <object idref="OutputPortAxis14"/> 
+               </void> 
+              </object> 
+             </void> 
+             <void property="target"> 
+              <object idref="DefaultPort23"/> 
+             </void> 
+             <void property="userObject"> 
+              <object idref="ConnectionAxis18"/> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void property="edges"> 
+           <object idref="HashSet23"/> 
+          </void> 
+          <void property="userObject"> 
+           <object idref="InputPortAxis9"/> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object id="DefaultPort26" class="org.jgraph.graph.DefaultPort"> 
+          <void property="attributes"> 
+           <void method="put"> 
+            <string>offset</string> 
+            <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+             <void property="y"> 
+              <double>666.0</double> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void id="HashSet26" property="edges"> 
+           <void method="add"> 
+            <object id="DefaultEdge15" class="org.jgraph.graph.DefaultEdge"> 
+             <void property="attributes"> 
+              <void method="put"> 
+               <string>linewidth</string> 
+               <float>2.5</float> 
+              </void> 
+              <void method="put"> 
+               <string>labelAlongEdge</string> 
+               <boolean>true</boolean> 
+              </void> 
+              <void method="put"> 
+               <string>lineEnd</string> 
+               <int>1</int> 
+              </void> 
+              <void method="put"> 
+               <string>linecolor</string> 
+               <object idref="Color0"/> 
+              </void> 
+              <void method="put"> 
+               <string>labelposition</string> 
+               <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                <void property="x"> 
+                 <double>500.0</double> 
+                </void> 
+               </object> 
+              </void> 
+              <void method="put"> 
+               <string>lineStyle</string> 
+               <int>13</int> 
+              </void> 
+              <void method="put"> 
+               <string>points</string> 
+               <object class="java.util.ArrayList"> 
+                <void method="add"> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="x"> 
+                   <double>1141.0</double> 
+                  </void> 
+                  <void property="y"> 
+                   <double>156.638</double> 
+                  </void> 
+                 </object> 
+                </void> 
+                <void method="add"> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="x"> 
+                   <double>1182.0</double> 
+                  </void> 
+                  <void property="y"> 
+                   <double>132.292</double> 
+                  </void> 
+                 </object> 
+                </void> 
+               </object> 
+              </void> 
+              <void method="put"> 
+               <string>editable</string> 
+               <boolean>false</boolean> 
+              </void> 
+             </void> 
+             <void property="source"> 
+              <object id="DefaultPort27" class="org.jgraph.graph.DefaultPort"> 
+               <void property="attributes"> 
+                <void method="put"> 
+                 <string>offset</string> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="x"> 
+                   <double>1000.0</double> 
+                  </void> 
+                  <void property="y"> 
+                   <double>333.0</double> 
+                  </void> 
+                 </object> 
+                </void> 
+               </void> 
+               <void id="HashSet27" property="edges"> 
+                <void method="add"> 
+                 <object idref="DefaultEdge15"/> 
+                </void> 
+               </void> 
+               <void property="edges"> 
+                <object idref="HashSet27"/> 
+               </void> 
+               <void property="userObject"> 
+                <object idref="OutputPortAxis9"/> 
+               </void> 
+              </object> 
+             </void> 
+             <void property="target"> 
+              <object idref="DefaultPort26"/> 
+             </void> 
+             <void property="userObject"> 
+              <object idref="ConnectionAxis8"/> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void property="edges"> 
+           <object idref="HashSet26"/> 
+          </void> 
+          <void property="userObject"> 
+           <object idref="InputPortAxis10"/> 
+          </void> 
+         </object> 
+        </void> 
+        <void property="attributes"> 
+         <void method="put"> 
+          <string>bordercolor</string> 
+          <object idref="Color2"/> 
+         </void> 
+         <void method="put"> 
+          <string>backgroundColor</string> 
+          <object idref="Color3"/> 
+         </void> 
+         <void method="put"> 
+          <string>bounds</string> 
+          <object class="org.jgraph.graph.AttributeMap$SerializableRectangle2D"> 
+           <void property="height"> 
+            <double>63.0</double> 
+           </void> 
+           <void property="width"> 
+            <double>197.0</double> 
+           </void> 
+           <void property="x"> 
+            <double>1182.0</double> 
+           </void> 
+           <void property="y"> 
+            <double>91.0</double> 
+           </void> 
+          </object> 
+         </void> 
+         <void method="put"> 
+          <string>gradientColor</string> 
+          <object idref="Color4"/> 
+         </void> 
+         <void method="put"> 
+          <string>opaque</string> 
+          <boolean>true</boolean> 
+         </void> 
+        </void> 
+        <void property="userObject"> 
+         <object idref="AtomicModuleAxis5"/> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object class="org.jgraph.graph.DefaultGraphCell"> 
+        <void method="add"> 
+         <object idref="DefaultPort22"/> 
+        </void> 
+        <void property="attributes"> 
+         <void method="put"> 
+          <string>bordercolor</string> 
+          <object idref="Color2"/> 
+         </void> 
+         <void method="put"> 
+          <string>backgroundColor</string> 
+          <object idref="Color3"/> 
+         </void> 
+         <void method="put"> 
+          <string>bounds</string> 
+          <object class="org.jgraph.graph.AttributeMap$SerializableRectangle2D"> 
+           <void property="height"> 
+            <double>45.0</double> 
+           </void> 
+           <void property="width"> 
+            <double>143.0</double> 
+           </void> 
+           <void property="x"> 
+            <double>1419.0</double> 
+           </void> 
+           <void property="y"> 
+            <double>95.0</double> 
+           </void> 
+          </object> 
+         </void> 
+         <void method="put"> 
+          <string>gradientColor</string> 
+          <object idref="Color4"/> 
+         </void> 
+         <void method="put"> 
+          <string>opaque</string> 
+          <boolean>true</boolean> 
+         </void> 
+        </void> 
+        <void property="userObject"> 
+         <object idref="AtomicModuleAxis6"/> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object idref="DefaultEdge0"/> 
+      </void> 
+      <void method="add"> 
+       <object idref="DefaultEdge1"/> 
+      </void> 
+      <void method="add"> 
+       <object idref="DefaultEdge2"/> 
+      </void> 
+      <void method="add"> 
+       <object class="org.jgraph.graph.DefaultGraphCell"> 
+        <void method="add"> 
+         <object idref="DefaultPort27"/> 
+        </void> 
+        <void method="add"> 
+         <object class="org.jgraph.graph.DefaultPort"> 
+          <void property="attributes"> 
+           <void method="put"> 
+            <string>offset</string> 
+            <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+             <void property="x"> 
+              <double>1000.0</double> 
+             </void> 
+             <void property="y"> 
+              <double>666.0</double> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void property="userObject"> 
+           <object idref="OutputPortAxis10"/> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object idref="DefaultPort25"/> 
+        </void> 
+        <void method="add"> 
+         <object id="DefaultPort28" class="org.jgraph.graph.DefaultPort"> 
+          <void property="attributes"> 
+           <void method="put"> 
+            <string>offset</string> 
+            <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+             <void property="y"> 
+              <double>500.0</double> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void id="HashSet28" property="edges"> 
+           <void method="add"> 
+            <object id="DefaultEdge16" class="org.jgraph.graph.DefaultEdge"> 
+             <void property="attributes"> 
+              <void method="put"> 
+               <string>lineEnd</string> 
+               <int>1</int> 
+              </void> 
+              <void method="put"> 
+               <string>linecolor</string> 
+               <object idref="Color1"/> 
+              </void> 
+              <void method="put"> 
+               <string>labelAlongEdge</string> 
+               <boolean>true</boolean> 
+              </void> 
+              <void method="put"> 
+               <string>lineStyle</string> 
+               <int>13</int> 
+              </void> 
+              <void method="put"> 
+               <string>editable</string> 
+               <boolean>false</boolean> 
+              </void> 
+              <void method="put"> 
+               <string>linewidth</string> 
+               <float>2.5</float> 
+              </void> 
+             </void> 
+             <void property="source"> 
+              <object id="DefaultPort29" class="org.jgraph.graph.DefaultPort"> 
+               <void property="attributes"> 
+                <void method="put"> 
+                 <string>offset</string> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="x"> 
+                   <double>1000.0</double> 
+                  </void> 
+                  <void property="y"> 
+                   <double>666.0</double> 
+                  </void> 
+                 </object> 
+                </void> 
+               </void> 
+               <void id="HashSet29" property="edges"> 
+                <void method="add"> 
+                 <object idref="DefaultEdge16"/> 
+                </void> 
+               </void> 
+               <void property="edges"> 
+                <object idref="HashSet29"/> 
+               </void> 
+               <void property="userObject"> 
+                <object idref="OutputPortAxis15"/> 
+               </void> 
+              </object> 
+             </void> 
+             <void property="target"> 
+              <object idref="DefaultPort28"/> 
+             </void> 
+             <void property="userObject"> 
+              <object idref="ConnectionAxis16"/> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void property="edges"> 
+           <object idref="HashSet28"/> 
+          </void> 
+          <void property="userObject"> 
+           <object idref="InputPortAxis13"/> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object idref="DefaultPort20"/> 
+        </void> 
+        <void property="attributes"> 
+         <void method="put"> 
+          <string>bordercolor</string> 
+          <object idref="Color2"/> 
+         </void> 
+         <void method="put"> 
+          <string>backgroundColor</string> 
+          <object idref="Color3"/> 
+         </void> 
+         <void method="put"> 
+          <string>bounds</string> 
+          <object class="org.jgraph.graph.AttributeMap$SerializableRectangle2D"> 
+           <void property="height"> 
+            <double>87.0</double> 
+           </void> 
+           <void property="width"> 
+            <double>175.0</double> 
+           </void> 
+           <void property="x"> 
+            <double>967.0</double> 
+           </void> 
+           <void property="y"> 
+            <double>128.0</double> 
+           </void> 
+          </object> 
+         </void> 
+         <void method="put"> 
+          <string>gradientColor</string> 
+          <object idref="Color4"/> 
+         </void> 
+         <void method="put"> 
+          <string>opaque</string> 
+          <boolean>true</boolean> 
+         </void> 
+        </void> 
+        <void property="userObject"> 
+         <object idref="AtomicModuleAxis7"/> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object idref="DefaultEdge10"/> 
+      </void> 
+      <void method="add"> 
+       <object idref="DefaultEdge9"/> 
+      </void> 
+      <void method="add"> 
+       <object idref="DefaultEdge7"/> 
+      </void> 
+      <void method="add"> 
+       <object idref="DefaultEdge6"/> 
+      </void> 
+      <void method="add"> 
+       <object idref="DefaultEdge11"/> 
+      </void> 
+      <void method="add"> 
+       <object idref="DefaultEdge15"/> 
+      </void> 
+      <void method="add"> 
+       <object idref="DefaultEdge12"/> 
+      </void> 
+      <void method="add"> 
+       <object idref="DefaultEdge3"/> 
+      </void> 
+      <void method="add"> 
+       <object class="org.jgraph.graph.DefaultGraphCell"> 
+        <void method="add"> 
+         <object id="DefaultPort30" class="org.jgraph.graph.DefaultPort"> 
+          <void property="attributes"> 
+           <void method="put"> 
+            <string>offset</string> 
+            <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+             <void property="x"> 
+              <double>1000.0</double> 
+             </void> 
+             <void property="y"> 
+              <double>333.0</double> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void id="HashSet30" property="edges"> 
+           <void method="add"> 
+            <object id="DefaultEdge17" class="org.jgraph.graph.DefaultEdge"> 
+             <void property="attributes"> 
+              <void method="put"> 
+               <string>lineEnd</string> 
+               <int>1</int> 
+              </void> 
+              <void method="put"> 
+               <string>linecolor</string> 
+               <object idref="Color1"/> 
+              </void> 
+              <void method="put"> 
+               <string>labelAlongEdge</string> 
+               <boolean>true</boolean> 
+              </void> 
+              <void method="put"> 
+               <string>lineStyle</string> 
+               <int>13</int> 
+              </void> 
+              <void method="put"> 
+               <string>editable</string> 
+               <boolean>false</boolean> 
+              </void> 
+              <void method="put"> 
+               <string>linewidth</string> 
+               <float>2.5</float> 
+              </void> 
+             </void> 
+             <void property="source"> 
+              <object idref="DefaultPort30"/> 
+             </void> 
+             <void property="target"> 
+              <object id="DefaultPort31" class="org.jgraph.graph.DefaultPort"> 
+               <void property="attributes"> 
+                <void method="put"> 
+                 <string>offset</string> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="y"> 
+                   <double>500.0</double> 
+                  </void> 
+                 </object> 
+                </void> 
+               </void> 
+               <void id="HashSet31" property="edges"> 
+                <void method="add"> 
+                 <object idref="DefaultEdge17"/> 
+                </void> 
+               </void> 
+               <void property="edges"> 
+                <object idref="HashSet31"/> 
+               </void> 
+               <void property="userObject"> 
+                <object idref="InputPortAxis16"/> 
+               </void> 
+              </object> 
+             </void> 
+             <void property="userObject"> 
+              <object idref="ConnectionAxis12"/> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void property="edges"> 
+           <object idref="HashSet30"/> 
+          </void> 
+          <void property="userObject"> 
+           <object idref="OutputPortAxis11"/> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object idref="DefaultPort8"/> 
+        </void> 
+        <void method="add"> 
+         <object class="org.jgraph.graph.DefaultPort"> 
+          <void property="attributes"> 
+           <void method="put"> 
+            <string>offset</string> 
+            <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+             <void property="y"> 
+              <double>500.0</double> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void property="userObject"> 
+           <object idref="InputPortAxis15"/> 
+          </void> 
+         </object> 
+        </void> 
+        <void property="attributes"> 
+         <void method="put"> 
+          <string>bordercolor</string> 
+          <object id="Color5" class="java.awt.Color"> 
+           <int>0</int> 
+           <int>0</int> 
+           <int>0</int> 
+           <int>255</int> 
+          </object> 
+         </void> 
+         <void method="put"> 
+          <string>bounds</string> 
+          <object class="org.jgraph.graph.AttributeMap$SerializableRectangle2D"> 
+           <void property="height"> 
+            <double>63.0</double> 
+           </void> 
+           <void property="width"> 
+            <double>183.0</double> 
+           </void> 
+           <void property="x"> 
+            <double>7.0</double> 
+           </void> 
+           <void property="y"> 
+            <double>92.0</double> 
+           </void> 
+          </object> 
+         </void> 
+         <void method="put"> 
+          <string>backgroundColor</string> 
+          <object id="Color6" class="java.awt.Color"> 
+           <int>255</int> 
+           <int>255</int> 
+           <int>255</int> 
+           <int>255</int> 
+          </object> 
+         </void> 
+         <void method="put"> 
+          <string>gradientColor</string> 
+          <object idref="Color4"/> 
+         </void> 
+         <void method="put"> 
+          <string>opaque</string> 
+          <boolean>true</boolean> 
+         </void> 
+        </void> 
+        <void property="userObject"> 
+         <object idref="AtomicModuleAxis8"/> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object idref="DefaultEdge4"/> 
+      </void> 
+      <void method="add"> 
+       <object class="org.jgraph.graph.DefaultGraphCell"> 
+        <void method="add"> 
+         <object id="DefaultPort32" class="org.jgraph.graph.DefaultPort"> 
+          <void property="attributes"> 
+           <void method="put"> 
+            <string>offset</string> 
+            <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+             <void property="x"> 
+              <double>1000.0</double> 
+             </void> 
+             <void property="y"> 
+              <double>500.0</double> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void id="HashSet32" property="edges"> 
+           <void method="add"> 
+            <object id="DefaultEdge18" class="org.jgraph.graph.DefaultEdge"> 
+             <void property="attributes"> 
+              <void method="put"> 
+               <string>lineEnd</string> 
+               <int>1</int> 
+              </void> 
+              <void method="put"> 
+               <string>linecolor</string> 
+               <object idref="Color1"/> 
+              </void> 
+              <void method="put"> 
+               <string>labelAlongEdge</string> 
+               <boolean>true</boolean> 
+              </void> 
+              <void method="put"> 
+               <string>lineStyle</string> 
+               <int>13</int> 
+              </void> 
+              <void method="put"> 
+               <string>editable</string> 
+               <boolean>false</boolean> 
+              </void> 
+              <void method="put"> 
+               <string>linewidth</string> 
+               <float>2.5</float> 
+              </void> 
+             </void> 
+             <void property="source"> 
+              <object idref="DefaultPort32"/> 
+             </void> 
+             <void property="target"> 
+              <object id="DefaultPort33" class="org.jgraph.graph.DefaultPort"> 
+               <void property="attributes"> 
+                <void method="put"> 
+                 <string>offset</string> 
+                 <object class="org.jgraph.graph.AttributeMap$SerializablePoint2D"> 
+                  <void property="y"> 
+                   <double>250.0</double> 
+                  </void> 
+                 </object> 
+                </void> 
+               </void> 
+               <void id="HashSet33" property="edges"> 
+                <void method="add"> 
+                 <object idref="DefaultEdge18"/> 
+                </void> 
+               </void> 
+               <void property="edges"> 
+                <object idref="HashSet33"/> 
+               </void> 
+               <void property="userObject"> 
+                <object idref="InputPortAxis17"/> 
+               </void> 
+              </object> 
+             </void> 
+             <void property="userObject"> 
+              <object idref="ConnectionAxis13"/> 
+             </void> 
+            </object> 
+           </void> 
+          </void> 
+          <void property="edges"> 
+           <object idref="HashSet32"/> 
+          </void> 
+          <void property="userObject"> 
+           <object idref="OutputPortAxis13"/> 
+          </void> 
+         </object> 
+        </void> 
+        <void method="add"> 
+         <object idref="DefaultPort31"/> 
+        </void> 
+        <void property="attributes"> 
+         <void method="put"> 
+          <string>bordercolor</string> 
+          <object idref="Color5"/> 
+         </void> 
+         <void method="put"> 
+          <string>bounds</string> 
+          <object class="org.jgraph.graph.AttributeMap$SerializableRectangle2D"> 
+           <void property="height"> 
+            <double>45.0</double> 
+           </void> 
+           <void property="width"> 
+            <double>156.0</double> 
+           </void> 
+           <void property="x"> 
+            <double>349.0</double> 
+           </void> 
+           <void property="y"> 
+            <double>12.0</double> 
+           </void> 
+          </object> 
+         </void> 
+         <void method="put"> 
+          <string>backgroundColor</string> 
+          <object idref="Color6"/> 
+         </void> 
+         <void method="put"> 
+          <string>gradientColor</string> 
+          <object idref="Color4"/> 
+         </void> 
+         <void method="put"> 
+          <string>opaque</string> 
+          <boolean>true</boolean> 
+         </void> 
+        </void> 
+        <void property="userObject"> 
+         <object idref="AtomicModuleAxis9"/> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object idref="DefaultEdge17"/> 
+      </void> 
+      <void method="add"> 
+       <object class="org.jgraph.graph.DefaultGraphCell"> 
+        <void method="add"> 
+         <object idref="DefaultPort24"/> 
+        </void> 
+        <void method="add"> 
+         <object idref="DefaultPort29"/> 
+        </void> 
+        <void method="add"> 
+         <object idref="DefaultPort33"/> 
+        </void> 
+        <void method="add"> 
+         <object idref="DefaultPort10"/> 
+        </void> 
+        <void method="add"> 
+         <object idref="DefaultPort14"/> 
+        </void> 
+        <void property="attributes"> 
+         <void method="put"> 
+          <string>bordercolor</string> 
+          <object idref="Color5"/> 
+         </void> 
+         <void method="put"> 
+          <string>bounds</string> 
+          <object class="org.jgraph.graph.AttributeMap$SerializableRectangle2D"> 
+           <void property="height"> 
+            <double>87.0</double> 
+           </void> 
+           <void property="width"> 
+            <double>152.0</double> 
+           </void> 
+           <void property="x"> 
+            <double>641.0</double> 
+           </void> 
+           <void property="y"> 
+            <double>14.0</double> 
+           </void> 
+          </object> 
+         </void> 
+         <void method="put"> 
+          <string>backgroundColor</string> 
+          <object idref="Color6"/> 
+         </void> 
+         <void method="put"> 
+          <string>gradientColor</string> 
+          <object idref="Color4"/> 
+         </void> 
+         <void method="put"> 
+          <string>opaque</string> 
+          <boolean>true</boolean> 
+         </void> 
+        </void> 
+        <void property="userObject"> 
+         <object idref="AtomicModuleAxis10"/> 
+        </void> 
+       </object> 
+      </void> 
+      <void method="add"> 
+       <object idref="DefaultEdge18"/> 
+      </void> 
+      <void method="add"> 
+       <object idref="DefaultEdge5"/> 
+      </void> 
+      <void method="add"> 
+       <object idref="DefaultEdge8"/> 
+      </void> 
+      <void method="add"> 
+       <object idref="DefaultEdge16"/> 
+      </void> 
+      <void method="add"> 
+       <object idref="DefaultEdge14"/> 
+      </void> 
+      <void method="add"> 
+       <object idref="DefaultEdge13"/> 
+      </void> 
+     </object> 
+     <object class="org.jgraph.graph.AttributeMap"/> 
+    </object> 
+   </void> 
+  </object> 
+ </object> 
+</java> 

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:VLEAtomicModule xsi:type="ns1:VLEAtomicModule" xmlns:ns1="http://vle.wtcw.nl/htopology" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <instanceID xsi:type="xsd:string" xsi:nil="true" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+ <name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">myModule2</name>
+ <arguments xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"></arguments>
+ <VLEInputPort type="byte[]" xsi:type="ns1:VLEInputPort">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">InputPort1</Name>
+ </VLEInputPort>
+ <VLEOutputPort type="byte[]" xsi:type="ns1:VLEOutputPort">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">OutputPort1</Name>
+ </VLEOutputPort>
+ <VLEOutputPort type="byte[]" xsi:type="ns1:VLEOutputPort">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">OutputPort2</Name>
+ </VLEOutputPort>
+ <host xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"></host>
+</ns1:VLEAtomicModule>

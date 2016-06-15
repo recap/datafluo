@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:VLEAtomicModule xsi:type="ns1:VLEAtomicModule" xmlns:ns1="http://vle.wtcw.nl/htopology" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <instanceID xsi:type="xsd:string" xsi:nil="true" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+ <name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">GnuPlot</name>
+ <category categoryname="Bioinformatics-SP1.5" taxonomyCode="150004" taxonomyURI="http://staff.science.uva.nl/~inda/SigWin-detector/html/modules.html" taxonomyValue="Graphics" xsi:type="ns1:CategoryType"/>
+ <arguments  xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"></arguments>
+
+
+ <VLEInputPort type="/file" xsi:type="ns1:VLEInputPort">
+  <Name xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">plot_file</Name>
+ </VLEInputPort>
+
+ <host xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema">fs2.das3.science.uva.nl</host>
+</ns1:VLEAtomicModule>

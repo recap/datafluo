@@ -1,0 +1,298 @@
+//****************************************************************************
+/** \class Rank Rank
+ *  \ingroup Arrays RankG Stat
+ *  \brief Associates a rank to each number of the input array(s).
+ *
+ *  \details 
+ *  \parameters
+ *  <dl>
+ *  	\param{datatype,datatype,d}
+ *  	    Input array data type. Valid data types: 
+ *  	    \c i, \c d, \c f.  
+ *  	\param{write_to,string,all}
+ *  	    Selects which output ports will be used.
+ *  	    Accepted values: 'none', 'all', or a combination of 'rank',
+ *  	    'sorted_list', and  'sorted_set' separated by blanc spaces.   
+ *  	\param{log_level,log_label,Info} 
+ *	    Logs messages with level higher or equal to \em log_level
+ *  	\param{test_ports,TestFlag,all} 
+ *  	    Selects which ports will 
+ *	    send/receive a test header to test number conversion. 
+ *  </dl>    
+ *  
+ *  \inputPorts
+ *  <dl>
+ *  	\port{sequence,array,/array} 
+ *  	    A succession of arrays to be ranked.
+ *  </dl>
+ *
+ *  \outputPorts
+ *  <dl>
+ *  	\port{rank,rank,/Rank} 
+ *  	    A succession of Rank data structures. One for each input array.
+ *  	\port{sorted_list,sorted_list,/array/sorted_list} 
+ *  	    A succession of sorted arrays. One for each input array.
+ *  	\port{sorted_set,sorted_set,/array/sorted_list/sorted_set} 
+ *  	    A succesion sorted sets (i.e., a sorted array without duplicate 
+ *  	    values. One for each input array.
+ *  </dl>
+ *
+ *  \description
+ *  	    Reads a succession of arrays. Generates a Rank structure for each
+ *   	array by associating a rank to each number of the array. Writes the
+ *  	resulting Rank structure, sorted_list, and sorted_set to the output
+ *  	ports that are active. 
+ *
+ *  \par Notes:
+ *  	- The data type of the input array has to be compatible with 
+ *  	(and will be converted to) the datatype specified by the parameter 
+ *  	\em datatype. 
+ *  	Accepeted datatypes: \c i, \c d, \c f. 
+ *  	- Accepts a succesion of input arrays.
+ *  	- Only the output ports selected by the   
+ *  	\em write_to parameter will be active.
+ *
+ *<!------------------------------------------------------------------------->
+ * \version 1.0 
+ * \since January 18, 2008.
+ * \author  Marcia A. Inda\n
+ *  	   Integrative Bioinformatics Unit, UvA\n
+ *         http://staff.science.uva.nl/~inda
+ */
+ /*---------------------------------------------------------------------------
+ *  History:
+ *  Jan 18, 2008: Accepts a succesion of input arrays.
+ *  	    	  Accepts array description.
+ *  Sep 17, 2007: test_ports paparemter added.
+ * Created: November 30, 2005	  *---------------------------------------------------------------------------
+ *  	This work was carried out in the context of the Virtual Laboratory for
+ *  e-Science project (http://www.vl-e.nl/) and of the BioRange program of the
+ *  Netherlands Bioinformatics Centre (NBIC, http://www.nbic.nl/). VL-e is 
+ *  supported by a BSIK grant from the Dutch Ministry of Education, Culture and
+ *  Science (OC&W) and the ICT innovation program of the Ministry of Economic
+ *  Affairs (EZ) of the Netherlands. BioRange is supported by a BSIK grant
+ *  through the Netherlands Genomics Initiative (NGI).
+ ****************************************************************************///*
+#include "TestFlags.H"
+#include "CommonDefines.h"
+#include "IModule.h"
+
+#include <fstream>
+#include <stdio.h>
+#include <string.h>
+#include <malloc.h>
+
+#include "LogManager.H"
+#include "Parameter.H"
+#include "DataIO.H"
+#include "VecIO.H"
+#include "Rank.H"
+
+#include "TimeLag.H"
+
+
+using namespace std;
+
+class Parameters{
+public:
+    string inputType;
+    string write_to;
+    WarnType logLevel;
+	string testPorts;
+	TestFlags<1,3> flag;
+	TestFlags<0,3> usePort;
+	
+};
+
+class RankVL : public IModule{
+  private:
+	stringstream *inStream;
+	stringstream *outStreamRank;
+	stringstream *outStreamSorted;
+	stringstream *outStreamNoDupl;
+	//Parameters
+	Parameter<char> inputType;
+    Parameter<string> writeto;
+    Parameter<WarnType> logLevel; //>Logging level.
+    Parameter<string> testPorts; //> Sets test_header function.
+    TestFlags<1,3> flag;
+    TestFlags<0,3> usePort;
+
+	template<class T>
+	void process_input(istream& rinStream)
+	{
+		//int noRecords = rM->mDataLength / sizeof(T);
+		//T* pdata;
+		//pdata = (T*)rM->mpData;
+		vector<T> sequence;
+		string descr = "";
+		read_vector(rinStream, sequence, descr);
+		//cout << "Wasalna hawn!" << endl;
+		//for(int i = 0;i < noRecords; i++){
+		//	cout << pdata[i] << endl;
+		//	sequence.push_back(pdata[i]);}
+		//string descr = "";
+		rank_vector<T>(sequence,descr);
+	
+	}//RankVL::process_input
+
+  public:
+	RankVL():
+	inputType("datatype", 'i'),
+    writeto("write_to", "all"),
+    logLevel("log_level",DEFAULTLOGLEVEL),
+    testPorts("test_ports","both"),
+    flag("both"),
+    usePort("both")
+	{
+		Log::open(__func__,logLevel.value);
+		cout << "Rank Constructor" << endl;
+		inStream = new stringstream();
+		outStreamRank = new stringstream();
+		outStreamSorted = new stringstream();
+		outStreamNoDupl = new stringstream();
+		flag.set_in_name(1,"sequence");
+  	   	flag.set_out_name(1,"rank");
+    	flag.set_out_name(2,"sorted_list");
+    	flag.set_out_name(3,"sorted_set");
+    	usePort.set_out_name(1,"rank");
+    	usePort.set_out_name(2,"sorted_list");
+    	usePort.set_out_name(3,"sorted_set");
+
+		//vlport2
+		rx_ports[1] = new MessageQueue("Iport1");
+        tx_ports[1] = new MessageQueue("OportRank");
+        tx_ports[2] = new MessageQueue("OportSorted");
+        tx_ports[3] = new MessageQueue("OportSortedSets");
+
+	}//RankVL
+    
+    ~RankVL() throw() {
+    }
+	
+	void init(vector<string> rParam)
+	{
+    cout << "Rank init" << endl;
+    //gParam.type = rParam.at(1);
+     //       cout << "type: " << gParam.type << endl;
+    //gParam.write_to = rParam.at(2);
+      //      cout << "write_to: " << gParam.write_to << endl;
+	}//RankVL::init
+
+	void start()
+	{
+    	cout << "Rank start" << endl;
+		Log::ptag(Release) << "RankVL::vlmain() is called. " << flush;
+    	MessageQueue::Message* im1 = rx_ports[1]->Read();
+		inStream->write( (char*)im1->mpData, im1->mDataLength);
+
+		//compute medians
+    switch (inputType.value){
+        case 'i':
+       	process_input<int>(*inStream);
+        break;
+    case 'd':
+        process_input<double>(*inStream);
+        break;
+    case 'f':
+        process_input<float>(*inStream);
+        break;
+    default:
+        LOG_PTAG(Fatal) << "Parameter " << inputType.name
+                    << " badly defined!. " << flush;
+        break;
+    }
+    Log::ptag(Release) << "RankVL::vlmain() is finished. " << flush;
+    sleep(1);
+
+	}//start
+	void stop()
+	{}
+
+
+template <class T> void rank_vector(vector<T> sequence,const string& descr)
+{
+    TimeLag timing;
+    
+    timing.start("Ranking");
+    Rank<T> rankSequence(sequence, descr, true);
+    timing.finish("Ranking");
+    timing.reset();
+    
+   
+    LOG_PTAG(Debug) << "WriteRank= "<< usePort.get_out_flag(1) << flush;
+    if (usePort.get_out_flag(1)){
+        LOG_PTAG(Info) << "Writing ranked sequence to outStreamRank. "<< flush;
+    	timing.start("RankWrite");
+    	rankSequence.write(*outStreamRank);  
+		MessageQueue::Message *om1 = new MessageQueue::Message();
+		string tstr = outStreamRank->str();
+		char* pstr = (char*)tstr.c_str();
+
+		om1->mDataLength = tstr.size();
+		om1->mpData = (void*)malloc(om1->mDataLength);
+		memcpy(om1->mpData,pstr,om1->mDataLength);
+		tx_ports[1]->Write(om1);
+	//	vector<int> vi;
+	//	string s = "";
+		//string s[10];
+		//T p;
+		
+		//*outStreamRank >> s[0] >> s[1] >> s[2] >> s[3] >> s[4] >> p; 
+		//cout << s[0] << s[1] <<s[2] << s[3] << s[4] << p << endl; 
+    	timing.finish("RankWrite");
+    	timing.reset();
+	
+    }//if 1
+    LOG_PTAG(Debug) << "WriteSorted= "<< usePort.get_out_flag(2) << flush;
+    
+    if (usePort.get_out_flag(2)){
+       LOG_PTAG(Info) << "Writing sorted to outStreamSorted. "<< flush;
+    	timing.start("RankWriteSorted");
+		rankSequence.write_sorted(*outStreamSorted);
+		
+		MessageQueue::Message *om1 = new MessageQueue::Message();
+		string tstr = outStreamSorted->str();
+		char* pstr = (char*)tstr.c_str();
+
+		om1->mDataLength = tstr.size();
+		om1->mpData = (void*)malloc(om1->mDataLength);
+		memcpy(om1->mpData,pstr,om1->mDataLength);
+		tx_ports[2]->Write(om1);
+		
+		//read_vector(*outStreamSorted,vi,s);
+		//vector<int>::iterator itr;
+		//for(itr = vi.begin(); itr < vi.end(); ++itr)
+			//cout << (*itr) << endl;
+		//rankSequence.print(cout);
+   		timing.finish("RankWriteSorted");
+    	timing.reset();
+    }//if 2
+   	LOG_PTAG(Debug) << "WriteSet= "<< usePort.get_out_flag(3) << flush;
+    if (usePort.get_out_flag(3)){
+        LOG_PTAG(Info) << "Writing sorted no duplicates to outStreamNoDupl. "  << flush;
+    	timing.start("RankWriteNoDupl");
+		rankSequence.write_sorted_no_duplicates(*outStreamNoDupl);
+		MessageQueue::Message *om1 = new MessageQueue::Message();
+		string tstr = outStreamNoDupl->str();
+		char* pstr = (char*)tstr.c_str();
+
+		om1->mDataLength = tstr.size();
+		om1->mpData = (void*)malloc(om1->mDataLength);
+		memcpy(om1->mpData,pstr,om1->mDataLength);
+		tx_ports[3]->Write(om1);
+		//read_vector(*outStreamNoDupl,vi,s);
+		//vector<int>::iterator itr;
+		//for(itr = vi.begin(); itr < vi.end(); ++itr)
+			//cout << (*itr) << endl;
+    	timing.finish("RankWriteNoDupl");
+    	timing.reset();
+   	}//if 3
+}
+   
+	
+
+};
+
+    
+REGISTER_MODULE(RankVL); 

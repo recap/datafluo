@@ -1,0 +1,31 @@
+TARGET = Rank
+
+ifdef ${BASEDIR}
+include ${BASEDIR}/Makefile.base
+else
+include ../../Makefile.base
+endif
+
+
+# DO NOT DELETE THIS LINE -- make depend depends on it.
+Rank.o: $(INCL)/LogManager.H
+Rank.o: $(INCL)/LogDefs.H
+Rank.o: $(INCL)/Parameter.H
+Rank.o: $(INCL)/TestFlags.H
+Rank.o: $(INCL)/DataIO.H
+Rank.o: $(INCL)/VecIO.H
+Rank.o: $(INCL)/HeaderIO.H
+Rank.o: $(INCL)/Parser.H
+Rank.o: $(INCL)/Rank.H
+Rank.o: $(INCL)/ArrayIO.H
+Rank.o: $(INCL)/StringConv.H
+Rank.o: $(INCL)/TimeLag.H
+$(INCL)/LogManager.o: $(INCL)/LogManager.H
+$(INCL)/LogManager.o: $(INCL)/LogDefs.H
+$(INCL)/HeaderIO.o: $(INCL)/HeaderIO.H
+$(INCL)/HeaderIO.o: $(INCL)/LogManager.H
+$(INCL)/HeaderIO.o: $(INCL)/LogDefs.H
+$(INCL)/HeaderIO.o: $(INCL)/Parser.H
+$(INCL)/TimeLag.o: $(INCL)/TimeLag.H
+$(INCL)/TimeLag.o: $(INCL)/LogManager.H
+$(INCL)/TimeLag.o: $(INCL)/LogDefs.H
