@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
-    <system systemId="http://reggie-laptop:41155/axis2/services/DatafluoWS?wsdl" uri="xml-resources/web-service-references/DatafluoWS/wsdl/reggie-laptop_41155/axis2/services/DatafluoWS.wsdl"/>
-</catalog>

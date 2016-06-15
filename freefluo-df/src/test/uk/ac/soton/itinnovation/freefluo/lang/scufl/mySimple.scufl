@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s:scufl xmlns:s="http://org.embl.ebi.escience/xscufl/0.1alpha" version="0.2" log="0">
+  <s:workflowdescription lsid="" author="" title="" />
+  <s:processor name="stringInput">
+    <s:stringconstant>some value</s:stringconstant>
+  </s:processor>
+  <s:processor name="long_running_process">
+    <s:beanshell>
+      <s:scriptvalue>Thread.sleep(10000);
+out = in;</s:scriptvalue>
+      <s:beanshellinputlist>
+        <s:beanshellinput s:syntactictype="'text/plain'">in</s:beanshellinput>
+      </s:beanshellinputlist>
+      <s:beanshelloutputlist>
+        <s:beanshelloutput s:syntactictype="'text/plain'">out</s:beanshelloutput>
+      </s:beanshelloutputlist>
+    </s:beanshell>
+  </s:processor>
+  <s:processor name="immediate_copy">
+    <s:beanshell>
+      <s:scriptvalue>out = in;</s:scriptvalue>
+      <s:beanshellinputlist>
+        <s:beanshellinput s:syntactictype="'text/plain'">in</s:beanshellinput>
+      </s:beanshellinputlist>
+      <s:beanshelloutputlist>
+        <s:beanshelloutput s:syntactictype="'text/plain'">out</s:beanshelloutput>
+      </s:beanshelloutputlist>
+    </s:beanshell>
+  </s:processor>
+  <s:link source="stringInput:value" sink="long_running_process:in" />
+  <s:link source="long_running_process:out" sink="immediate_copy:in" />
+  <s:link source="immediate_copy:out" sink="output" />
+  <s:sink name="output" />
+</s:scufl>
+
+

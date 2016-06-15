@@ -1,0 +1,175 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+// University of Southampton IT Innovation Centre, 2002
+//
+// Copyright in this library belongs to the IT Innovation Centre of
+// 2 Venture Road, Chilworth Science Park, Southampton SO16 7NP, UK.
+//
+// This library is free software; you can redistribute it and/or
+// modify it under the terms of the GNU Lesser General Public License
+// as published by the Free Software Foundation; either version 2.1
+// of the License, or (at your option) any later version.
+//
+// This library is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public
+// License along with this library; if not, write to the Free Software
+// Foundation Inc, 59 Temple Place, Suite 330, Boston MA 02111-1307 USA.
+//
+//      Created By          :   Justin Ferris
+//      Created Date        :   2003/05/28
+//      Created for Project :   MYGRID
+//      Dependencies        :
+//
+//      Last commit info    :   $Author: ferris $
+//                              $Date: 2005/08/23 06:24:47 $
+//                              $Revision: 1.1 $
+//
+///////////////////////////////////////////////////////////////////////////////////////
+
+package uk.ac.soton.itinnovation.freefluo.core.port;
+
+import uk.ac.soton.itinnovation.freefluo.core.task.*;
+import java.util.*;
+
+import uk.ac.soton.itinnovation.freefluo.core.flow.*;
+import uk.ac.soton.itinnovation.freefluo.core.event.*;
+
+/**
+ * A Task represents a unit of work.  The engine calls the handleRun()
+ * method of task to allow it to do its work.  The engine determines when
+ * to call the handleRun() command method according to a task's parent dependencies.
+ * Dependencies are established with the linkTo() method of this class.  To make
+ * a child task depend on a parent task, link them as follows:
+ * <p>
+ * parentTask.linkTo(childTask)
+ * <p>
+ * With this dependency, the childTask will have its handleRun method called only after
+ * successful completion of the handleRun() method of the parentTask (and any other parents).
+ * <p>
+ * Subclass <a href="AbstractTask.html">AbstractTask</a> and implement the handleRun() method to
+ * provide a custom task.  Sublcass implementations of handleRun() must indicate the success
+ * or failure of a Task by calling one of the fail() or complete() methods of this class.
+ * <p>
+ */
+public interface Port extends RunEventSource {
+   public static final int DIRECTION_IN = 1;
+   public static final int DIRECTION_OUT = 2;
+   public static final int DIRECTION_BOTH = 0;
+  /**
+   * Get the id of this task
+   *
+   * @return the tasks unique id 
+   */
+  public String getPortId();
+
+  /** 
+   * Get the human readable name for this task
+   */
+  public String getName();
+	
+  /**
+   * Get a human readable description of this task
+   */
+  public String getDescription();
+
+  /**
+   * If this task has failed this method retrieves the error message.
+   * If the task hasn't failed, an empty String is returned.
+   */
+  public String getErrorMessage();
+
+  /**
+   * Get the task's state
+   *
+   * @return the present state
+   */
+  public PortState getState();
+
+  /**
+   * is the port active i.e. does it have data
+   * @return
+   */
+  public boolean isStateActive();
+	
+  /**
+   * Get a simple string represenation of the tasks present state. e.g. NEW, SCHEDULED, 
+   * SCHEDULING, SCHEDULED, RUNNING, COMPLETE, CANCELLED, FAILED
+   *
+   * @return the tasks state as a string
+   */
+  public String getStateString();
+	
+  /**
+   * If the tasks state is in a final state (complete, failed or cancelled
+   * this method returns true
+   *
+   * @return true if the state is final or false if the task is yet to reach its final state
+   */
+  public boolean isStateFinal();
+	
+  /**
+   * Get the task that contains this port
+   *
+   * @return the tasks flow
+   */
+  public Task getTask();
+  
+  /**
+   * Make a dependency link (a data link typically) between this task
+   * and a child.
+   * This is a convenience method.  The implementation should call addChild() 
+   * and addParent() appropriately
+   * 
+   */
+  public void linkTo(Port port);
+	
+  
+  /**
+   * Destroy this port.  Implementing classes provide their own
+   * custom clean up code.
+   * destroy() typically will be called after a Task is in a final
+   * state and its ports should destruct.
+   */
+  public void destroy();
+
+  /**
+   * Disable port.
+   */
+  public void disable();
+  /**
+   * Enable port
+   */
+  public void enable();
+
+  /**
+   * Add an observer of this task's state
+   */
+  public void addPortStateListener(PortStateListener taskStateListener);
+
+  /**
+   * Remove an observer of this task's state
+   */
+  public void removePortStateListener(PortStateListener taskStateListener);
+	
+  /**
+   * Add an observer of arbitrary (application specifice) events generated by this 
+   * Task.
+   */
+  public void addPortkEventListener(PortEventListener taskEventListener);
+
+  /**
+   * Remove an observer of arbitrary events generated by this Task.
+   */
+  public void removePortEventListener(PortEventListener taskEventListener);
+
+  
+  /**
+   * Debugging method.  Provides a string representation of the tasks members.
+   */
+  public String toString();
+	
+}

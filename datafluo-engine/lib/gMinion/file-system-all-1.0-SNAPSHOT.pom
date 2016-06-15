@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <name>All (Java + DLL/Shared Lib)</name>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>fr.in2p3.commons.filesystem</groupId>
+    <artifactId>file-system-all</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <profiles>
+        <profile>
+            <id>win32</id>
+            <activation>
+                <os>
+                    <family>windows</family>
+                </os>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>fr.in2p3.commons.filesystem</groupId>
+                    <artifactId>file-system-win32</artifactId>
+                    <version>1.0-SNAPSHOT</version>
+                    <type>dll</type>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>linux</id>
+            <activation>
+                <os>
+                    <family>unix</family>
+                </os>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>fr.in2p3.commons.filesystem</groupId>
+                    <artifactId>libfile-system-linux</artifactId>
+                    <version>1.0-SNAPSHOT</version>
+                    <type>so</type>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
+    <scm>
+        <connection>${scm.root}</connection>
+        <developerConnection>${devscm.root}</developerConnection>
+        <url>${webscm.root}</url>
+    </scm>
+    <distributionManagement>
+        <repository>
+            <id>CC-IN2P3 artifacts repository</id>
+            <url>${repository.upload.root}</url>
+        </repository>
+        <site>
+            <id>Web site for this application</id>
+            <url>${site.upload.root}</url>
+        </site>
+    </distributionManagement>
+</project>

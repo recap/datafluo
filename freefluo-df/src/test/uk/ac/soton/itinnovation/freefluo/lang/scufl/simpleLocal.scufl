@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s:scufl xmlns:s="http://org.embl.ebi.escience/xscufl/0.1alpha" version="0.2" log="0">
+  <s:workflowdescription lsid="urn:lsid:www.mygrid.org.uk:operation:SPA318BIVQ0" author="" title="" />
+  <s:processor name="String_list_intersection">
+    <s:local>org.embl.ebi.escience.scuflworkers.java.StringSetIntersection</s:local>
+  </s:processor>
+  <s:link source="String_list_intersection:intersection" sink="intersection" />
+  <s:link source="list1" sink="String_list_intersection:list1" />
+  <s:link source="list2" sink="String_list_intersection:list2" />
+  <s:source name="list1" />
+  <s:source name="list2" />
+  <s:sink name="intersection" />
+</s:scufl>
+
+

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <extend>../project.xml</extend>
+  <pomVersion>3</pomVersion>
+  <id>freefluo</id>
+  <groupId>freefluo</groupId>
+  <name>Freefluo</name>
+  <currentVersion>${freefluo.version}</currentVersion>
+  <organization>
+		<name>IT Innovation</name>
+		<url>http://www.it-innovation.soton.ac.uk/</url>
+		<logo>http://www.it-innovation.soton.ac.uk/images/it-logo.gif</logo>
+	</organization>
+  <inceptionYear>2005</inceptionYear>
+  <package>uk.ac.soton.itinnovation.freefluo.plugins.gria</package>
+  <logo></logo>
+  <description></description>
+  <shortDescription></shortDescription>
+  <url></url>
+  <issueTrackingUrl></issueTrackingUrl>
+  <siteAddress></siteAddress>
+  <siteDirectory></siteDirectory>
+  <distributionDirectory></distributionDirectory>
+  <repository>
+    <connection></connection>
+    <url></url>
+  </repository>
+  <mailingLists/>
+  <developers/>
+  <dependencies>
+
+<!--
+    <dependency>
+      <groupId></groupId>
+      <artifactId></artifactId>
+      <version>${.version}</version>
+      <type>jar</type>
+    </dependency>
+-->
+    <dependency>
+      <groupId>axis</groupId>
+      <artifactId>axis</artifactId>
+      <version>${axis.version}</version>
+      <type>jar</type>
+    </dependency>
+
+    <dependency>
+      <groupId>axis</groupId>
+      <artifactId>axis-jaxrpc</artifactId>
+      <version>${axis.jaxrpc.version}</version>
+      <type>jar</type>
+    </dependency>
+
+    <dependency>
+      <groupId>axis</groupId>
+      <artifactId>axis-saaj</artifactId>
+      <version>${axis.saaj.version}</version>
+      <type>jar</type>
+    </dependency>
+
+    <dependency>
+      <groupId>commons-cli</groupId>
+      <artifactId>commons-cli</artifactId>
+      <version>${commons.cli.version}</version>
+      <type>jar</type>
+    </dependency>
+
+    <dependency>
+      <groupId>itinnov-gridservit</groupId>
+      <artifactId>itinnov-gridservit</artifactId>
+      <version>${itinnov.gridservit.version}</version>
+      <type>jar</type>
+    </dependency>
+
+    <dependency>
+      <groupId>itinnov-grid-utils</groupId>
+      <artifactId>itinnov-grid-utils</artifactId>
+      <version>${itinnov.grid.utils.version}</version>
+      <type>jar</type>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>${servlet.api.version}</version>
+      <type>jar</type>
+    </dependency>
+
+    <dependency>
+      <groupId>jdom</groupId>
+      <artifactId>jdom</artifactId>
+      <version>${jdom.version}</version>
+      <type>jar</type>
+    </dependency>
+    
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>${log4j.version}</version>
+      <type>jar</type>
+    </dependency>
+  
+  </dependencies>  
+
+  <build>
+    <nagEmailAddress></nagEmailAddress>
+    <sourceDirectory>src/java</sourceDirectory>
+    <unitTestSourceDirectory>src/test</unitTestSourceDirectory>
+    <unitTest>
+      <includes>
+        <include>**/Test*.java</include>
+      </includes>
+    </unitTest>
+    <resources>
+      <!--
+      <resource>
+        <directory>src/conf</directory>
+        <targetPath>uk/ac/soton/itinnovation/freefluo/plugins/gria</targetPath>
+        <includes>
+          <include>castor-mapping.xml</include>
+        </includes>
+      </resource>
+      -->
+    </resources>
+  </build>
+</project>
